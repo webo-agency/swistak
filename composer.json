@@ -1,0 +1,25 @@
+{
+  "name": "webo/swistak",
+  "description": "Webo - wp for swistak",
+  "license": "proprietary",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "php": ">=5.4",
+    "johnpbloch/wordpress": "^4.2",
+    "wpackagist-plugin/advanced-custom-fields": "^5"
+  },
+  "extra": {
+    "wordpress-install-dir": "public",
+    "installer-types": ["cms-core"],
+    "installer-paths": {
+      "public/wp": ["type:cms-core"],
+      "public/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "public/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+    }
+  }
+}

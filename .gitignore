@@ -1,0 +1,27 @@
+## Server
+
+# Old CGI catalog
+cgi-bin
+
+# Added with Softaculous Apps Installer
+public/wp-content/plugins/akismet
+
+## Custom
+
+# Node modules
+node_modules/
+
+# Log files and databases
+*.log
+*.sql
+*.sqlite
+
+# Composer dependencies
+vendor
+
+## Custom WP addons
+
+# Plugins
+public/wp-content/plugins/advanced-custom-fields
+
+# Themes
