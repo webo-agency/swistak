@@ -19,9 +19,5 @@ node_modules/
 # Composer dependencies
 vendor
 
-## Custom WP addons
-
-# Plugins
-public/wp-content/plugins/advanced-custom-fields
-
-# Themes
+## Public
+public/*
