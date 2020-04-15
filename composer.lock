@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4a1b9de40b99420104da7ed0520b6041",
+    "content-hash": "d1c67c74a8ed705ddc0c86737a20b3ab",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -520,6 +520,18 @@
                 "environment"
             ],
             "time": "2020-04-12T15:20:09+00:00"
+        },
+        {
+            "name": "webo/swistak-theme",
+            "version": "1.0.0",
+            "dist": {
+                "type": "path",
+                "url": "theme"
+            },
+            "require": {
+                "johnpbloch/wordpress": "^5.0.0"
+            },
+            "type": "wordpress-theme"
         }
     ],
     "packages-dev": [],

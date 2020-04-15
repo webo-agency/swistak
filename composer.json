@@ -24,11 +24,27 @@
           "ffraenz/private-composer-installer": "^4.0"
         }
       }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "webo/swistak-theme",
+        "version": "1.0.0",
+        "type": "wordpress-theme",
+        "dist": {
+          "type": "path",
+          "url": "theme"
+        },
+        "require": {
+          "johnpbloch/wordpress" : "^5.0.0"
+        }
+      }
     }
   ],
   "require": {
     "johnpbloch/wordpress" : "^5.0.0",
-    "advanced-custom-fields/advanced-custom-fields-pro": "^5.8.9"
+    "advanced-custom-fields/advanced-custom-fields-pro": "^5.8.9",
+    "webo/swistak-theme": "^1.0"
   },
   "extra": {
     "wordpress-install-dir": "public",
