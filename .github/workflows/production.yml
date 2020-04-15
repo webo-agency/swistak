@@ -19,6 +19,7 @@ jobs:
         uses: MilesChou/composer-action@master
         with:
           args: install
+        env:
           ACF_PRO_KEY: ${{ secrets.ACF_PRO_KEY }}
 
       - name: FTP Deploy
