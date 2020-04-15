@@ -21,3 +21,6 @@ vendor
 
 ## Public
 public/*
+
+## Enviroment
+.env

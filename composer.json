@@ -2,21 +2,40 @@
   "name": "webo/swistak",
   "description": "Webo - wp for swistak",
   "license": "proprietary",
+  "prefer-stable": true,
   "repositories": [
     {
       "type": "composer",
       "url": "https://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields/advanced-custom-fields-pro",
+        "version": "5.7.13",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t={%VERSION}"
+        },
+        "require": {
+          "johnpbloch/wordpress" : "^5.0.0",
+          "composer/installers": "^1.4",
+          "ffraenz/private-composer-installer": "^4.0"
+        }
+      }
     }
   ],
   "require": {
-    "johnpbloch/wordpress" : ">=5",
-    "wpackagist-plugin/advanced-custom-fields": "^5"
+    "johnpbloch/wordpress" : "^5.0.0",
+    "advanced-custom-fields/advanced-custom-fields-pro": "^5.0.0"
   },
   "extra": {
     "wordpress-install-dir": "public",
     "installer-types": ["cms-core"],
     "installer-paths": {
       "public/wp": ["type:cms-core"],
+      "public/wp-content/mu-plugins/{$name}/" : ["type:wordpress-muplugin"],
       "public/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
       "public/wp-content/themes/{$name}/": ["type:wordpress-theme"]
     }
