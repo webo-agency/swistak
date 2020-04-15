@@ -37,6 +37,9 @@
         },
         "require": {
           "johnpbloch/wordpress" : "^5.0.0"
+        },
+        "options": {
+          "symlink": false
         }
       }
     }
