@@ -51,7 +51,9 @@ services:
     # Useful for file edits
     # I like to map only wp-content
     # We should not care about WP core files
-    volumes: ["./public:/var/www/html"]
+    volumes: 
+      - ./public:/var/www/html      
+      - ./theme:/var/www/html/wp-content/themes/swistak-theme
     # Add environment variables
     # https://docs.docker.com/compose/compose-file/#environment
     environment:
