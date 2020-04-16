@@ -36,6 +36,10 @@
   "require": {
     "johnpbloch/wordpress" : "^5.0.0",
     "advanced-custom-fields/advanced-custom-fields-pro": "^5.8.9",
+    "wpackagist-plugin/litespeed-cache": "^2.9.9.2",
+    "wpackagist-plugin/cloudguard": "^1.4.2",
+    "wpackagist-plugin/acf-extended":"^0.8.5",
+    "wpackagist-plugin/advanced-forms":"^1.6.7",
     "webo/swistak-theme": "^1.0"
   },
   "extra": {
