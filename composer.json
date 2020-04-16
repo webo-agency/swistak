@@ -31,6 +31,13 @@
       "options": {
         "symlink": false
       }
+    },
+    {
+      "type": "path",
+      "url": "config",
+      "options": {
+        "symlink": false
+      }
     }
   ],
   "require": {
@@ -40,7 +47,17 @@
     "wpackagist-plugin/cloudguard": "^1.4.2",
     "wpackagist-plugin/acf-extended":"^0.8.5",
     "wpackagist-plugin/advanced-forms":"^1.6.7",
-    "webo/swistak-theme": "^1.0"
+    "webo/swistak-theme": "^1.0",
+    "vlucas/phpdotenv": "^4.1",
+    "slowprog/composer-copy-file": "^0.3.1"
+  },
+  "scripts": {
+    "post-install-cmd": [
+        "SlowProg\\CopyFile\\ScriptHandler::copy"
+    ],
+    "post-update-cmd": [
+        "SlowProg\\CopyFile\\ScriptHandler::copy"
+    ]
   },
   "extra": {
     "wordpress-install-dir": "public",
@@ -50,6 +67,9 @@
       "public/wp-content/mu-plugins/{$name}/" : ["type:wordpress-muplugin"],
       "public/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
       "public/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "copy-file": {
+      "config/": "public/"
     }
   }
 }

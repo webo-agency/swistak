@@ -24,3 +24,7 @@ public/*
 
 ## Enviroment
 .env
+
+## Configuration
+config/wp-config.production.php
+config/wp-config.local.php
