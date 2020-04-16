@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "36a5246ac0dd13a772157fc5b9f2d6bd",
+    "content-hash": "387a91da9406f4f79287b1208a38342e",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -575,19 +575,18 @@
             "dist": {
                 "type": "path",
                 "url": "theme",
-                "reference": "e1f4e1a8bb8bd08f4b89ce8ea4d3f36d438eae6f"
+                "reference": "f371588a1d08cba3a6ed9e4d1950c5deb375ddd2"
             },
             "require": {
                 "composer/installers": "^1.4",
                 "johnpbloch/wordpress": "^5.0.0"
             },
-            "type": "cms-core",
+            "type": "wordpress-theme",
             "license": [
                 "proprietary"
             ],
             "description": "Theme",
             "transport-options": {
-                "symlink": false,
                 "relative": true
             }
         },

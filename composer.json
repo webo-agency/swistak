@@ -27,10 +27,7 @@
     },
     {
       "type": "path",
-      "url": "theme",
-      "options": {
-        "symlink": false
-      }
+      "url": "theme"
     },
     {
       "type": "path",
@@ -47,9 +44,9 @@
     "wpackagist-plugin/cloudguard": "^1.4.2",
     "wpackagist-plugin/acf-extended":"^0.8.5",
     "wpackagist-plugin/advanced-forms":"^1.6.7",
-    "webo/swistak-theme": "^1.0",
     "vlucas/phpdotenv": "^4.1",
-    "slowprog/composer-copy-file": "^0.3.1"
+    "slowprog/composer-copy-file": "^0.3.1",
+    "webo/swistak-theme": "1.0.0"
   },
   "scripts": {
     "post-install-cmd": [
@@ -61,7 +58,6 @@
   },
   "extra": {
     "wordpress-install-dir": "public",
-    "installer-types": ["cms-core"],
     "installer-paths": {
       "public/wp": ["type:cms-core"],
       "public/wp-content/mu-plugins/{$name}/" : ["type:wordpress-muplugin"],
