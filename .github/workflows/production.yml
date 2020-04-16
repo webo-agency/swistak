@@ -21,6 +21,7 @@ jobs:
           args: install
         env:
           ACF_PRO_KEY: ${{ secrets.ACF_PRO_KEY }}
+          COMPOSER_MIRROR_PATH_REPOS: 1
 
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@3.0.0
@@ -28,4 +29,4 @@ jobs:
           ftp-server: ${{ secrets.FTP_HOST }}
           ftp-username: ${{ secrets.FTP_USER }}
           ftp-password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: public
+          local-dir: /

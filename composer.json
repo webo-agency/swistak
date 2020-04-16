@@ -26,21 +26,10 @@
       }
     },
     {
-      "type": "package",
-      "package": {
-        "name": "webo/swistak-theme",
-        "version": "1.0.0",
-        "type": "wordpress-theme",
-        "dist": {
-          "type": "path",
-          "url": "theme"
-        },
-        "require": {
-          "johnpbloch/wordpress" : "^5.0.0"
-        },
-        "options": {
-          "symlink": false
-        }
+      "type": "path",
+      "url": "theme",
+      "options": {
+        "symlink": false
       }
     }
   ],
