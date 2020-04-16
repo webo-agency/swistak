@@ -9,13 +9,6 @@
  * these cannot be overridden in environment config files so make sure these are only set once.
  * 
  */
-  
-
-/** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8mb4');
-
-/** The Database Collate type. Don't change this if in doubt. */
-define('DB_COLLATE', '');
 
 // /**#@+
 //  * Authentication Unique Keys and Salts.
@@ -45,17 +38,6 @@ define('DB_COLLATE', '');
  * prefix. Only numbers, letters, and underscores please!
  */
 $table_prefix  = 'wp_';
-
-/**
- * WordPress Localized Language, defaults to English.
- *
- * Change this to localize WordPress. A corresponding MO file for the chosen
- * language must be installed to wp-content/languages. For example, install
- * de_DE.mo to wp-content/languages and set WPLANG to 'de_DE' to enable German
- * language support.
- */
-define('WPLANG', '');
-
 
 // Recommended WP config settings, uncomment to use these
 

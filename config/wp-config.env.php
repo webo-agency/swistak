@@ -24,8 +24,8 @@ $env = [
         'ssl'    => true,
     ],
     'development' => [
-        'domain' => 'swistak.local',
-        'path'   => 'public',
+        'domain' => 'localhost',
+        'path'   => '',
         'ssl'    => false,
     ],
 ];
