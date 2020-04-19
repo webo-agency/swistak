@@ -1,0 +1,13 @@
+.ks-menu-toggler {
+    border: none;
+    background: none;
+    position: fixed;
+    right: 3px;
+    z-index: 99;
+    color: $color-primary;
+    transform: translateY(-40px);
+
+    @include media-screen(tablet) {
+        display: none;
+    }
+}
