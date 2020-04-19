@@ -27,3 +27,6 @@ public/*
 
 ## Configuration
 config/wp-config.production.php
+
+## Build assets
+theme/assets/public
