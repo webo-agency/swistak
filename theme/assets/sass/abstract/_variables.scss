@@ -1,0 +1,40 @@
+
+$base-spacing:                      20px;
+$base-border-radius:                4px;
+$base-easing-function:              cubic-bezier(0.0, 0.0, 0.2, 1);
+$base-box-shadow:                   0 1px 2px rgba(0, 0, 0, 0.1);
+
+//
+// Font weights.
+//
+$weight-extra-light: 200;
+$weight-light: 300;
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-semi-bold: 600;
+$weight-extra-bold: 800;
+
+//
+// Line height
+//
+
+$line-height-normal: 25px;
+$line-height-big: 35px;
+$line-height-large: 50px;
+
+//
+// Fonts sizes.
+//
+
+$size-small: 12px;
+$size-small-2: 15px;
+$size-normal: 16px;
+$size-big: 20px;
+$size-large: 30px;
+$size-large-2: 40px;
+$size-large-3: 50px;
+
+$base-font-family:                  'Poppins', Arial, sans-serif;
+$base-font-weight:                  $weight-regular;
+$base-font-size:                    $size-normal;
+$base-line-height:                  1.15;
