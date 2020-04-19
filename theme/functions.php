@@ -183,3 +183,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function swistak_theme_styles() {
+	wp_register_style('custom-styles', get_template_directory_uri().'/assets/public/dist/css/style.min.css');
+	wp_enqueue_style('custom-styles');
+  }
+  add_action('wp_enqueue_scripts', 'swistak_theme_styles');
