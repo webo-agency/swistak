@@ -39,9 +39,6 @@ jobs:
           ACF_PRO_KEY: ${{ secrets.ACF_PRO_KEY }}
           COMPOSER_MIRROR_PATH_REPOS: 1
 
-      - name: Generate website
-        run: npm run build --if-present
-
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@3.0.0
         with:
