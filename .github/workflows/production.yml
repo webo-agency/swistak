@@ -28,14 +28,8 @@ jobs:
         with:
           node-version: 12.x
 
-      - name: Swith to main theme
-        run: cd theme
-
-      - name: Install dependency
-        run: npm install
-      
-      - name: Swith to main theme
-        run: cd ../
+      - name: Install dependency in theme
+        run: npm install --prefix theme
 
       - name: Composer run
         uses: MilesChou/composer-action@master
