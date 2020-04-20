@@ -1,0 +1,64 @@
+
+.acf-fields {
+
+    > .acf-field {
+        border-top: none!important;
+        padding: 0!important;
+        
+        &:first-child {
+            margin-right: 16px;
+        }
+
+        &:focus-within {
+
+            .acf-label {
+                transform: translate(0, -5px);
+
+                label {
+                    color: $color-primary;
+                    font-size: $size-small;
+                }
+            }
+        }
+    }
+
+    .acf-field-text,
+    .acf-field-email {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 35px!important;
+
+        @include media-screen(tablet) {
+            width: calc(50% - 10px);
+        }
+    }
+
+    .acf-field-textarea {
+        margin-bottom: 20px!important;
+    }
+}
+
+.site {
+
+    .ks-form {
+        
+        .acf-label {
+            position: absolute!important;
+            top: 0;
+            transform: translate(20px, 0);
+            transition: transform .6s;
+            -webkit-transition: transform .6s;
+            -moz-transition: transform .6s;
+            -o-transition: transform .6s;
+        
+            label {
+                font-size: $size-big;
+                font-weight: $weight-medium!important;
+                transition: font-size .6s, color .6s;
+                -webkit-transition: font-size .6s, color .6s;
+                -moz-transition: font-size .6s, color .6s;
+                -o-transition: font-size .6s, color .6s;
+            }
+        }
+    }
+}
