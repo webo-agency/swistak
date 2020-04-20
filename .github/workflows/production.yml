@@ -23,6 +23,14 @@ jobs:
           path: vendor
           key: ${{ runner.OS }}-build-${{ hashFiles('**/composer.lock') }}
 
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      - name: Install dependency in theme
+        run: cd theme && npm install && npm run generate && rm -rf node_modules && cd ../
+
       - name: Composer run
         uses: MilesChou/composer-action@master
         with:
