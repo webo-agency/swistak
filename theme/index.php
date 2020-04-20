@@ -17,10 +17,6 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-			<section class="ks-hero">
-				<div class="ks-container">
-				</div>
-			</section>
 
 		<?php
 		if ( have_posts() ) :
