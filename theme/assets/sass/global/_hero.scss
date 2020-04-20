@@ -2,4 +2,78 @@
     background: url('../../../images/hero.png') 70% center no-repeat;
     background-size: cover;
     height: 100vh;
+    
+    &__buttons {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    
+        @include media-screen(tablet) {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        button {
+
+            &:not(:last-child) {
+                margin-bottom: 17px;
+    
+                @include media-screen(tablet) {
+                    margin-right: 37px;
+                    margin-bottom: 0;
+                }
+            }
+
+            a {
+                line-height: 0;
+            }
+        }
+    }
+
+    &__container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        h1 {
+            margin-bottom: 30px;
+    
+            @include media-screen(tablet-wide) {
+                margin-bottom: 70px;
+            }
+        }
+
+        p {
+            font-size: $size-big;
+            line-height: $line-height-normal;
+            font-weight: $weight-light;
+            margin-bottom: 30px;
+    
+            @include media-screen(tablet) {
+                padding-right: 150px;
+            }
+    
+            @include media-screen(tablet-wide) {
+                font-size: $size-large;
+                line-height: $line-height-big;
+                font-weight: $weight-light;
+                margin-bottom: 60px;
+                padding-right: 0;
+            }
+        }
+
+        a {
+            font-size: $size-small-2;
+            line-height: $line-height-large;
+            font-weight: $weight-regular;
+        }
+    }
+
+    &__content {
+        max-width: 320px;
+    
+        @include media-screen(tablet) {
+            max-width: 500px;
+        }
+    }
 }
