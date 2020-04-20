@@ -23,6 +23,20 @@ jobs:
           path: vendor
           key: ${{ runner.OS }}-build-${{ hashFiles('**/composer.lock') }}
 
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      - name: Swith to main theme
+        run: cd theme
+
+      - name: Install dependency
+        run: npm ci
+      
+      - name: Swith to main theme
+        run: cd ../
+
       - name: Composer run
         uses: MilesChou/composer-action@master
         with:
@@ -30,6 +44,9 @@ jobs:
         env:
           ACF_PRO_KEY: ${{ secrets.ACF_PRO_KEY }}
           COMPOSER_MIRROR_PATH_REPOS: 1
+
+      - name: Generate website
+        run: npm run build --if-present
 
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@3.0.0
