@@ -7,9 +7,10 @@
     "dev-server": "webpack-dev-server --mode development",
     "webpack-build": "webpack --mode production",
     "gulp-build": "gulp sass",
-    "build": "concurrently --kill-others \"npm run webpack-build\" \"npm run gulp-build\""
+    "build": "concurrently --kill-others \"npm run webpack-build\" \"npm run gulp-build\"",
+    "generate": "npm run webpack-build && npm run gulp-build"
   },
-  "devDependencies": {
+  "dependencies": {
     "babel-loader": "^8.0.6",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
@@ -25,7 +26,8 @@
     "gulp-sass": "^4.0.2",
     "webpack": "^4.32.2",
     "webpack-cli": "^3.3.2",
-    "webpack-dev-server": "^3.4.1"
+    "webpack-dev-server": "^3.4.1",
+    "concurrently": "^5.1.0"
   },
   "browserslist": [
     "> 1%",
@@ -42,8 +44,5 @@
   ],
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "concurrently": "^5.1.0"
-  }
+  "license": "ISC"
 }
