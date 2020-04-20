@@ -32,7 +32,7 @@ jobs:
         run: cd theme
 
       - name: Install dependency
-        run: npm ci
+        run: npm install
       
       - name: Swith to main theme
         run: cd ../
