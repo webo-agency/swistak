@@ -29,7 +29,7 @@ jobs:
           node-version: 12.x
 
       - name: Install dependency in theme
-        run: cd theme && npm install && cd ../
+        run: cd theme && npm install && rm -rf node_modules && cd ../
 
       - name: Composer run
         uses: MilesChou/composer-action@master
