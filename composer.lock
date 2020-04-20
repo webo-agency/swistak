@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "387a91da9406f4f79287b1208a38342e",
+    "content-hash": "3f2e8b2e60e7b0637fb8a7642e8f516f",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -575,7 +575,7 @@
             "dist": {
                 "type": "path",
                 "url": "theme",
-                "reference": "f371588a1d08cba3a6ed9e4d1950c5deb375ddd2"
+                "reference": "a815d137bb27129c4eecc49088e42e7d4c1b92d2"
             },
             "require": {
                 "composer/installers": "^1.4",
@@ -587,44 +587,27 @@
             ],
             "description": "Theme",
             "transport-options": {
+                "symlink": false,
                 "relative": true
             }
         },
         {
             "name": "wpackagist-plugin/acf-extended",
-            "version": "0.8.5",
+            "version": "0.8.5.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/acf-extended/",
-                "reference": "tags/0.8.5"
+                "reference": "tags/0.8.5.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/acf-extended.0.8.5.zip"
+                "url": "https://downloads.wordpress.org/plugin/acf-extended.0.8.5.5.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/acf-extended/"
-        },
-        {
-            "name": "wpackagist-plugin/advanced-forms",
-            "version": "1.6.7",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/advanced-forms/",
-                "reference": "tags/1.6.7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-forms.1.6.7.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/advanced-forms/"
         },
         {
             "name": "wpackagist-plugin/cloudguard",
