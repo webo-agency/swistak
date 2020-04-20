@@ -3,8 +3,20 @@ body {
     font-weight: $base-font-weight;
     font-size: $base-font-size;
     line-height: $base-line-height;
+    color: $color-dark;
 }
 
 a {
     text-decoration: none;
+}
+
+h1 {
+    font-size: $size-large;
+    font-weight: $weight-extra-bold;
+    line-height: $line-height-big;
+    
+    @include media-screen(tablet-wide) {
+        line-height: $line-height-large;
+        font-size: $size-large-3;
+    }
 }
