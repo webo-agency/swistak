@@ -19,6 +19,13 @@ if( $hero_button_2 ):
     $hero_button_2_title = $hero_button_2['title'];
     $hero_button_2_target = $hero_button_2['target'] ? $hero_button_2['target'] : '_self';
 endif;
+
+$about_img = get_field('about_image');
+if( $about_img ): 
+    $about_img_url = $about_img['url'];
+    $about_img_alt = $about_img['alt'];
+    $about_img_title = $about_img['title'];
+endif;
 ?>
 
 	<div id="primary" class="content-area">
@@ -39,6 +46,36 @@ endif;
 							</div>
 						</div>
 					</div>
+				</div>
+			</section>
+			<section id="ks-about" class="ks-background-shape ks-background-shape__square ks-about">
+				<div class="ks-container">
+					<div class="ks-about__inner">
+						<img class="ks-about__main-image"  src="<?php echo $about_img['url']; ?>" alt="<?php echo $about_img['alt']; ?>" alt="<?php echo $about_img['title']; ?>" />
+						<div class="ks-about__content">
+							<div><?php echo the_field('about_heading'); ?></div>
+
+							<div class="ks-about__facilities">
+							<?php
+								if( have_rows('about_facilities') ):
+									while ( have_rows('about_facilities') ) : the_row();
+										$image = get_sub_field('about_facility_image');
+										$content = get_sub_field('about_facility_info');
+										?>	
+											<div class="ks-facility">
+												<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" alt="<?php echo $image['title']; ?>" />
+												<span><?php echo $content; ?></span>
+											</div>
+										<?php
+									endwhile;
+								else :
+								endif;
+							?>
+							</div>
+
+							<div class="ks-about__text"><?php echo the_field('about_content'); ?></div>
+						</div>
+					</div>	
 				</div>
 			</section>
 		</main><!-- #main -->
