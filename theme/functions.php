@@ -184,5 +184,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 function swistak_theme_styles() {
 	wp_register_style('custom-styles', get_template_directory_uri().'/assets/public/dist/css/style.min.css');
 	wp_enqueue_style('custom-styles');
-  }
-  add_action('wp_enqueue_scripts', 'swistak_theme_styles');
+}
+add_action('wp_enqueue_scripts', 'swistak_theme_styles');
+
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page();
+}
