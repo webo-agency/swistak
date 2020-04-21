@@ -8,10 +8,11 @@
     &__main-image {
         max-width: 100%;
         border-radius: $base-border-radius * 2;
-        flex: 0 0 100%;
         margin-bottom: 40px;
+        box-shadow: $base-box-shadow;
 
         @include media-screen(tablet) {
+            flex: 0 0 100%;
             margin-bottom: 0;
             max-width: 250px;
             margin-right: 40px;
