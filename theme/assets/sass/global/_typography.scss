@@ -1,9 +1,25 @@
 body {
     font-family: $base-font-family;
     font-weight: $base-font-weight;
-    font-size: $base-font-size;
+    font-size: $size-small;
     line-height: $base-line-height;
     color: $color-dark;
+
+    @include media-screen(tablet) {
+        font-size: $base-font-size;
+    }
+}
+
+p {
+    margin-bottom: 10px;
+
+    @include media-screen(tablet) {
+        margin-bottom: 20px;
+    }
+
+    @include media-screen(desktop) {
+        margin-bottom: 35px;
+    }
 }
 
 a {
@@ -19,4 +35,10 @@ h1 {
         line-height: $line-height-large;
         font-size: $size-large-3;
     }
+}
+
+h2 {
+    font-size: $size-large-2;
+    line-height: $line-height-large;
+    font-weight: $weight-extra-bold;
 }
