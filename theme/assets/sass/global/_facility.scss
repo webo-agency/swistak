@@ -1,5 +1,5 @@
 .ks-facility {
-    
+
     &:not(:last-child) {
         margin-bottom: 50px;
     
@@ -13,7 +13,7 @@
         margin-bottom: 20px;
     }
 
-    span {
+    &__title {
         display: block;
         font-size: $size-normal;
         line-height: $line-height-normal;
@@ -22,6 +22,28 @@
         @include media-screen(desktop) {
             font-size: $size-big;
             line-height: $line-height-normal;
+        }
+
+        &--with-line {
+            padding-left: 30px;
+            position: relative;
+            
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 11px;
+                width: 20px;
+                height: 3px;
+                background: $color-primary;
+            }
+        }
+    }
+
+    &--extended {
+
+        img {
+            margin-left: 30px;
         }
     }
 }
