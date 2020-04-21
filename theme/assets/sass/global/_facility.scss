@@ -1,0 +1,27 @@
+.ks-facility {
+    
+    &:not(:last-child) {
+        margin-bottom: 50px;
+    
+        @include media-screen(tablet) {
+            margin-bottom: 0;
+        }
+    }
+
+    img {
+        max-width: 65px;
+        margin-bottom: 20px;
+    }
+
+    span {
+        display: block;
+        font-size: $size-normal;
+        line-height: $line-height-normal;
+        font-weight: $weight-semi-bold;
+
+        @include media-screen(desktop) {
+            font-size: $size-big;
+            line-height: $line-height-normal;
+        }
+    }
+}
