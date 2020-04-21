@@ -1,6 +1,9 @@
 @import './abstract/variables';
 @import './abstract/colors';
 @import './abstract/mixins';
+
+@import './sections/about';
+
 @import './global/reset';
 @import './global/wpadminbar';
 @import './global/typography';
@@ -9,6 +12,8 @@
 @import './global/menuToggler';
 @import './global/button';
 @import './global/hero';
+@import './global/background-shape';
+@import './global/facility';
 @import './global/input';
 @import './global/form';
 @import './global/acf-fields';
