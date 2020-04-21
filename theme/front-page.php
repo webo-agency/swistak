@@ -66,7 +66,9 @@ endif;
 			<section id="ks-about" class="ks-background-shape ks-background-shape__square ks-about">
 				<div class="ks-container">
 					<div class="ks-about__inner">
-						<img class="ks-about__main-image"  src="<?php echo $about_img['url']; ?>" alt="<?php echo $about_img['alt']; ?>" alt="<?php echo $about_img['title']; ?>" />
+						<div class="ks-image ks-image--big">
+							<img  src="<?php echo $about_img['url']; ?>" alt="<?php echo $about_img['alt']; ?>" alt="<?php echo $about_img['title']; ?>" />
+						</div>
 						<div class="ks-about__content">
 							<div><?php echo the_field('about_heading'); ?></div>
 
@@ -102,8 +104,12 @@ endif;
 							<?php echo the_field('help_content'); ?>
 						</div>
 						<div class="ks-help__images">
-							<img class="ks-help__main-image"  src="<?php echo $help_img_1['url']; ?>" alt="<?php echo $help_img_1['alt']; ?>" alt="<?php echo $help_img_1['title']; ?>" />
-							<img class="ks-help__main-image"  src="<?php echo $help_img_2['url']; ?>" alt="<?php echo $help_img_2['alt']; ?>" alt="<?php echo $help_img_2['title']; ?>" />
+							<div class="ks-image ks-image--normal">
+								<img src="<?php echo $help_img_1['url']; ?>" alt="<?php echo $help_img_1['alt']; ?>" alt="<?php echo $help_img_1['title']; ?>" />
+							</div>
+							<div class="ks-image ks-image--normal">
+								<img src="<?php echo $help_img_2['url']; ?>" alt="<?php echo $help_img_2['alt']; ?>" alt="<?php echo $help_img_2['title']; ?>" />
+							</div>
 						</div>
 					</div>
 					<div class="ks-help__facilities">
