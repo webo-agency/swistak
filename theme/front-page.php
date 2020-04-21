@@ -26,6 +26,20 @@ if( $about_img ):
     $about_img_alt = $about_img['alt'];
     $about_img_title = $about_img['title'];
 endif;
+
+$help_img_1 = get_field('help_image_1');
+if( $help_img_1 ): 
+    $help_img_1_url = $help_img_1['url'];
+    $help_img_1_alt = $help_img_1['alt'];
+    $help_img_1_title = $help_img_1['title'];
+endif;
+
+$help_img_2 = get_field('help_image_2');
+if( $help_img_2 ): 
+    $help_img_2_url = $help_img_2['url'];
+    $help_img_2_alt = $help_img_2['alt'];
+    $help_img_2_title = $help_img_2['title'];
+endif;
 ?>
 
 	<div id="primary" class="content-area">
@@ -48,6 +62,7 @@ endif;
 					</div>
 				</div>
 			</section>
+
 			<section id="ks-about" class="ks-background-shape ks-background-shape__square ks-about">
 				<div class="ks-container">
 					<div class="ks-about__inner">
@@ -64,7 +79,7 @@ endif;
 										?>	
 											<div class="ks-facility">
 												<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" alt="<?php echo $image['title']; ?>" />
-												<span><?php echo $content; ?></span>
+												<span class="ks-facility__title"><?php echo $content; ?></span>
 											</div>
 										<?php
 									endwhile;
@@ -76,6 +91,42 @@ endif;
 							<div class="ks-about__text"><?php echo the_field('about_content'); ?></div>
 						</div>
 					</div>	
+				</div>
+			</section>
+			
+			<section id="ks-how-do-i-help" class="ks-help ks-background-shape ks-background-shape__rectangle">
+				<div class="ks-container">
+					<div class="ks-help__info">
+						<div class="ks-help__content">
+							<?php echo the_field('help_heading'); ?>
+							<?php echo the_field('help_content'); ?>
+						</div>
+						<div class="ks-help__images">
+							<img class="ks-help__main-image"  src="<?php echo $help_img_1['url']; ?>" alt="<?php echo $help_img_1['alt']; ?>" alt="<?php echo $help_img_1['title']; ?>" />
+							<img class="ks-help__main-image"  src="<?php echo $help_img_2['url']; ?>" alt="<?php echo $help_img_2['alt']; ?>" alt="<?php echo $help_img_2['title']; ?>" />
+						</div>
+					</div>
+					<div class="ks-help__facilities">
+						<?php
+							if( have_rows('help_facilities') ):
+								while ( have_rows('help_facilities') ) : the_row();
+									$icon = get_sub_field('help_facility_icon');
+									$title = get_sub_field('help_facility_title');
+									$description = get_sub_field('help_facility_description');
+									?>	
+										<div class="ks-facility ks-facility--extended">
+											<div>
+												<img src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>" alt="<?php echo $icon['title']; ?>" />
+												<span class="ks-facility__title ks-facility__title--with-line"><?php echo $title; ?></span>
+											</div>
+											<?php echo $description; ?>
+										</div>
+									<?php
+								endwhile;
+							else :
+							endif;
+						?>
+					</div>
 				</div>
 			</section>
 		</main><!-- #main -->
