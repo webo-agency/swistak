@@ -64,7 +64,7 @@ endif;
 	</footer>
 </div>
 
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 <?php wp_footer(); ?>
-
 </body>
 </html>
