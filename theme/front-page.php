@@ -40,6 +40,13 @@ if( $help_img_2 ):
     $help_img_2_alt = $help_img_2['alt'];
     $help_img_2_title = $help_img_2['title'];
 endif;
+
+$strategy_image = get_field('strategy_image');
+if( $strategy_image ): 
+    $strategy_image_url = $strategy_image['url'];
+    $strategy_image_alt = $strategy_image['alt'];
+    $strategy_image_title = $strategy_image['title'];
+endif;
 ?>
 
 	<div id="primary" class="content-area">
@@ -132,6 +139,21 @@ endif;
 							else :
 							endif;
 						?>
+					</div>
+				</div>
+			</section>
+
+			<section id="ks-strategy" class="ks-strategy">
+				<div class="ks-container">
+					<div class="ks-strategy__container">
+						<div class="ks-strategy__column ks-strategy__column--content">
+							<?php echo the_field('strategy_heading'); ?>
+							<p class="ks-facility__title"><?php echo the_field('strategy_heading_2'); ?></p>
+							<?php echo the_field('strategy_content'); ?>
+						</div>
+						<div class="ks-strategy__column ks-strategy__column--image">
+							<img src="<?php echo $strategy_image['url']; ?>" alt="<?php echo $strategy_image['alt']; ?>" alt="<?php echo $strategy_image['title']; ?>" />
+						</div>
 					</div>
 				</div>
 			</section>
