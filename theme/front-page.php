@@ -157,6 +157,41 @@ endif;
 					</div>
 				</div>
 			</section>
+			
+			<section id="ks-case-studies" class="ks-case-studies">
+				<div class="ks-container">
+							<?php echo the_field('case_studies_heading'); ?>
+					<div class="ks-slider">
+						<div class="swiper-container ks-swiper__case-studies">
+							<div class="swiper-wrapper">
+								<?php
+									if( have_rows('case_studies_cases') ):
+										while ( have_rows('case_studies_cases') ) : the_row();
+											$title = get_sub_field('case_study_title');
+											$description = get_sub_field('case_study_description');
+											?>	
+												<div class="swiper-slide">
+													<div class="ks-case-studies__slide">
+														<div class="ks-facility">
+															<span class="ks-facility__title ks-util-weight-500 ks-case-studies-swiper-slide"></span>
+															<span class="ks-facility__title ks-facility__title--with-line"><?php echo $title; ?></span>
+														</div>
+														<?php echo $description; ?>
+													</div>
+												</div>
+											<?php
+										endwhile;
+									else :
+									endif;
+								?>
+							</div>
+							<div class="swiper-button-next"></div>
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
