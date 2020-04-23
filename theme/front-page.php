@@ -161,7 +161,7 @@ endif;
 			<section id="ks-case-studies" class="ks-case-studies">
 				<div class="ks-container">
 					<?php echo the_field('case_studies_heading'); ?>
-					<div class="ks-swiper">
+					<div class="ks-swiper ks-swiper--shadow">
 						<div class="swiper-container ks-swiper__case-studies">
 							<div class="swiper-wrapper">
 								<?php
@@ -188,7 +188,47 @@ endif;
 							<div class="swiper-button-next"></div>
 							<div class="swiper-button-prev"></div>
 						</div>
-						<div class="swiper-pagination"></div>
+						<div class="swiper-pagination ks-case-studies__swiper-pagination"></div>
+					</div>
+				</div>
+			</section>
+
+			<section id="ks-recommendations" class="ks-recommendations">
+				<div class="ks-container">
+					<?php echo the_field('recommendations_heading'); ?>
+					<div class="ks-swiper">
+						<div class="ks-recommendations__swiper-container">
+							<div class="swiper-wrapper">
+								<?php
+									if( have_rows('recommendations_items') ):
+										while ( have_rows('recommendations_items') ) : the_row();
+											$image = get_sub_field('recommendation_image');
+											$author_role = get_sub_field('recommendation_author_role');
+											$author_name = get_sub_field('recommendation_author_name');
+											$description = get_sub_field('recommendation_description');
+											?>	
+												<div class="swiper-slide">	
+													<div class="ks-recommendation">
+														<div class="ks-image ks-image--small">
+															<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" alt="<?php echo $image['title']; ?>" />
+														</div>
+														<div class="ks-recommendation__content">
+															<div class="ks-facility">
+																<span class="ks-facility__title ks-facility__title--thin ks-facility__title--small"><?php echo $author_role; ?></span>
+																<span class="ks-facility__title ks-facility__title--with-line"><?php echo $author_name; ?></span>
+															</div>
+															<?php echo $description; ?>
+														</div>
+													</div>
+												</div>
+											<?php
+										endwhile;
+									else :
+									endif;
+								?>
+							</div>
+						</div>
+					<div class="swiper-pagination ks-recommendations__swiper-pagination"></div>
 					</div>
 				</div>
 			</section>
