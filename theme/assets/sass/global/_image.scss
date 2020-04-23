@@ -6,7 +6,7 @@ img {
 .ks-image {
     max-width: 100%;
     border-radius: $base-border-radius * 2;
-    box-shadow: $base-box-shadow;
+    @include filter-shadow($drop-shadow-size-1, $color-shadow);
     position: relative;
     overflow: hidden;
 
@@ -49,6 +49,17 @@ img {
             max-width: 260px;
             max-height: 320px;
             margin-left: 20px;
+        }
+    }
+
+    &--small {
+        @include filter-shadow($drop-shadow-size-2, $color-shadow);
+        max-width: 127px;
+        max-height: 160px;
+        margin-bottom: 10px;
+
+        @include media-screen(tablet) {
+            margin-right: 40px;
         }
     }
 }
