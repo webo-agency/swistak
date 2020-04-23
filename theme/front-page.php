@@ -160,8 +160,8 @@ endif;
 			
 			<section id="ks-case-studies" class="ks-case-studies">
 				<div class="ks-container">
-							<?php echo the_field('case_studies_heading'); ?>
-					<div class="ks-slider">
+					<?php echo the_field('case_studies_heading'); ?>
+					<div class="ks-swiper">
 						<div class="swiper-container ks-swiper__case-studies">
 							<div class="swiper-wrapper">
 								<?php
@@ -187,8 +187,8 @@ endif;
 							</div>
 							<div class="swiper-button-next"></div>
 							<div class="swiper-button-prev"></div>
-							<div class="swiper-pagination"></div>
 						</div>
+						<div class="swiper-pagination"></div>
 					</div>
 				</div>
 			</section>

@@ -1,35 +1,53 @@
-.ks-swiper__case-studies {
+.ks-swiper {
+    filter: $filter-drop-shadow-light;
+    position: relative;
+
+    &__case-studies {
     
-    .swiper-container {
-        width: 100%;
-        height: 100%;
-    }
-    .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: $color-gray-light-3;
-    }
-
-    .swiper-pagination {
-        position: relative;
-        margin-top: 40px;
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-        color: $color-dark;
-        transition: color .4s;
-
-        &::after {
-            font-size: 30px;
-            font-weight: $weight-extra-bold;
+        &.swiper-container {
+            width: 100%;
+            height: 100%;
+            background: $color-gray-light-3;
+            border-radius: $img-border-radius;
+        }
+        
+        .swiper-wrapper {
+            align-items: center;
         }
 
-        &:hover {
-            color: $color-primary;
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-    }
+
+        .swiper-pagination {
+            bottom: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            &-bullet {
+                &:not(:last-child) {
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: $color-dark;
+            transition: color .4s;
+
+            &::after {
+                font-size: 30px;
+                font-weight: $weight-extra-bold;
+            }
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    } 
 }
