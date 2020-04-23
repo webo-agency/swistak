@@ -10,7 +10,7 @@
             background: $color-gray-light-3;
             border-radius: $img-border-radius;
         }
-        
+
         .swiper-wrapper {
             align-items: center;
         }
@@ -21,18 +21,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-
-        .swiper-pagination {
-            bottom: -60px;
-            left: 50%;
-            transform: translateX(-50%);
-
-            &-bullet {
-                &:not(:last-child) {
-                    margin-right: 10px;
-                }
-            }
         }
 
         .swiper-button-next,
@@ -50,4 +38,16 @@
             }
         }
     } 
+
+    .swiper-pagination {
+        bottom: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &-bullet {
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+    }
 }
