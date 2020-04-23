@@ -34,10 +34,11 @@
             padding-left: 25px;
             padding-top: 70px;
             transform: translateX(-105%);
-            box-shadow: 1px 7px 5px 2px $color-gray;
+            @include filter-shadow($drop-shadow-size-1, $color-shadow);
             height: 100%;
             transition-duration: .4s;
             background-color: $color-gray-light-3;
+            z-index: 9999;
     
             @include media-screen(tablet) {
                 background-color: transparent;
@@ -46,7 +47,7 @@
                 padding-left: 0;
                 padding-top: 0;
                 transform: translateX(0);
-                box-shadow: none;
+                filter: none;
                 height: auto;
                 align-items: flex-end;
             }
