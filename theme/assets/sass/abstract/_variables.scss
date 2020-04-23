@@ -3,7 +3,9 @@ $base-spacing:                      20px;
 $base-border-radius:                5px;
 $base-easing-function:              cubic-bezier(0.0, 0.0, 0.2, 1);
 $base-box-shadow:                   20px 20px 50px 5px $color-gray-light-5;
-$filter-drop-shadow-light:          drop-shadow(0px 20px 25px $color-shadow-light);
+
+$drop-shadow-size-1: 0px 20px 25px;
+$drop-shadow-size-2: 0px 5px 7.5px;
 
 $img-border-radius: $base-border-radius * 2; 
 

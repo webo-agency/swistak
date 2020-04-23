@@ -24,3 +24,7 @@ $breakpoints: (
         @error 'There is no breakpoint "#{$width}" in the breakpoints list.';
     }
 }
+
+@mixin filter-shadow($size, $color) {
+    filter: drop-shadow($size $color);
+}
