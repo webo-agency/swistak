@@ -6,7 +6,7 @@ const caseStudiesSwiper = new Swiper ('.swiper-container', {
         prevEl: '.swiper-button-prev',
     },
     pagination: {
-        el: '.swiper-pagination'
+        el: '.ks-case-studies__swiper-pagination'
     },
     mousewheel: true,
     keyboard: true,
@@ -31,6 +31,20 @@ const caseStudiesSwiperObject = {
         return this.renderIndexInSpots();
     }
 }
+
+const recommendationsSwiper = new Swiper('.ks-recommendations__swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 70,
+    pagination: {
+        el: '.ks-recommendations__swiper-pagination',
+        clickable: true,
+    },
+    breakpoints: {
+        1024: {
+          slidesPerView: 2,
+        },
+      }
+  });
 
 caseStudiesSwiperObject.initSwiper();
 
