@@ -1,6 +1,9 @@
 .ks-swiper {
-    @include filter-shadow($drop-shadow-size-1, $color-shadow-light);
     position: relative;
+
+    &--shadow {
+        @include filter-shadow($drop-shadow-size-1, $color-shadow-light);
+    }
 
     &__case-studies {
     
@@ -40,6 +43,7 @@
     } 
 
     .swiper-pagination {
+        width: 100%;
         bottom: -60px;
         left: 50%;
         transform: translateX(-50%);
