@@ -1,5 +1,5 @@
 .ks-swiper {
-    filter: $filter-drop-shadow-light;
+    @include filter-shadow($drop-shadow-size-1, $color-shadow-light);
     position: relative;
 
     &__case-studies {
