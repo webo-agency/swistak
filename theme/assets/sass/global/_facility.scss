@@ -38,6 +38,14 @@
                 background: $color-primary;
             }
         }
+
+        &--thin {
+            font-weight: $weight-light;
+        }
+
+        &--small {
+            font-size: $size-normal;
+        }
     }
 
     &--extended {
