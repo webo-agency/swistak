@@ -43,8 +43,17 @@ const recommendationsSwiper = new Swiper('.ks-recommendations__swiper-container'
         1024: {
           slidesPerView: 2,
         },
-      }
-  });
+    }
+});
+
+const contentSwiper = new Swiper('.ks-content__swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 50,
+    pagination: {
+        el: '.ks-content__swiper-pagination',
+        clickable: true,
+    },
+});
 
 caseStudiesSwiperObject.initSwiper();
 
