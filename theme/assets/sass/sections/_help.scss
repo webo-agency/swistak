@@ -1,5 +1,6 @@
 .ks-help {
     background: url('../../../images/bg-help.png') center center no-repeat;
+    background-size: cover;
     padding: 50px 0 35px;
 
     @include media-screen(desktop) {

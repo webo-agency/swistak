@@ -1,5 +1,6 @@
 .ks-strategy {
     background: url('../../../images/bg-strategy.png') center center no-repeat;
+    background-size: cover;
     padding: 30px 0;
 
     @include media-screen(tablet) {
