@@ -42,7 +42,7 @@
             }
     
             &::before {
-                content: url('../../../images/play-1.png');
+                content: url('../../../images/video-icon-green.png');
             }
         }
 
@@ -54,7 +54,7 @@
             }
     
             &::before {
-                content: url('../../../images/play-1.png');
+                content: url('../../../images/video-icon-white.png');
             }
         }
     }
@@ -69,7 +69,7 @@
         background: $color-gray-light-3;
         transition: background .1s;
         color: $color-dark;
-        
+
         a {
             color: $color-dark;
         }
