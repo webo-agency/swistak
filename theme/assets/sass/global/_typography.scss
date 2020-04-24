@@ -27,18 +27,22 @@ a {
 }
 
 h1 {
-    font-size: $size-large;
+    font-size: $size-large-2;
     font-weight: $weight-extra-bold;
-    line-height: $line-height-big;
+    line-height: $line-height-large;
     
     @include media-screen(tablet-wide) {
-        line-height: $line-height-large;
         font-size: $size-large-3;
     }
 }
 
 h2 {
-    font-size: $size-large-2;
-    line-height: $line-height-large;
+    font-size: $size-large;
+    line-height: $line-height-big;
     font-weight: $weight-extra-bold;
+    
+    @include media-screen(tablet-wide) {
+        font-size: $size-large-2;
+        line-height: $line-height-large;
+    }
 }

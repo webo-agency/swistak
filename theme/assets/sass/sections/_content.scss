@@ -8,6 +8,18 @@
     @include media-screen(desktop) {
         padding: 70px 0 110px;
     }
+
+    h2 {
+        margin-bottom: 40px;
+
+        @include media-screen(tablet) {
+            margin-bottom: 60px;
+        }
+    
+        @include media-screen(desktop) {
+            margin-bottom: 100px;
+        }
+    }
             
     .ks-image {
         position: relative;
