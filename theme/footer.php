@@ -56,7 +56,7 @@ endif;
 					<span>&copy; 2020 All Rights Reserved</span>
 				</div>
 				<div class="ks-copyright__social-media">
-					<a href="#"><img src="<?php echo get_template_directory_uri() . '/assets/images/fb-icon.png' ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
+					<a href="#"><img src="<?php echo get_template_directory_uri() . '/assets/images/linkedin-icon.png' ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
 					<a href="#"><img src="<?php echo get_template_directory_uri() . '/assets/images/fb-icon.png' ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
 				</div>
 			</div>
