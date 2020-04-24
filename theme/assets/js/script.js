@@ -7,9 +7,7 @@ const caseStudiesSwiper = new Swiper ('.swiper-container', {
     },
     pagination: {
         el: '.ks-case-studies__swiper-pagination'
-    },
-    mousewheel: true,
-    keyboard: true,
+    }
 })
 
 const caseStudiesSwiperObject = {
