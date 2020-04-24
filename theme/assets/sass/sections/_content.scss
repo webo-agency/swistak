@@ -23,6 +23,10 @@
             
     .ks-image {
         position: relative;
+
+        img {
+            max-width: initial;
+        }
     }
 
     p {
@@ -74,7 +78,7 @@
                     margin-right: 30px;
                 }
                 @include media-screen(desktop) {
-                    margin-right: 80px;
+                    margin-right: 70px;
                 }
             }
 
@@ -102,7 +106,7 @@
     }
 
     &__swiper-pagination {
-        margin-top: 40px;
+        margin-top: 30px;
         margin-left: 6px;
     }
 }
