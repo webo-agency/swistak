@@ -232,6 +232,53 @@ endif;
 					</div>
 				</div>
 			</section>
+			
+			<section id="ks-content" class="ks-content">
+				<div class="ks-container">
+					<?php echo the_field('materials_heading'); ?>
+					<?php echo the_field('materials_description'); ?>
+					<div class="ks-content__container">
+						<div class="ks-content__column">
+							<div class="ks-image ks-image--no-shadow">
+								<img src="<?php echo get_template_directory_uri() . '/assets/images/video-plug.png' ?>" alt="<?php bloginfo( 'name' ); ?>" />
+								<div class="ks-overlay"></div>
+								
+								<button class="ks-button ks-button__video ks-button__video--white">
+									<a href="<?php echo esc_url( $hero_button_2_url ); ?>" target="<?php echo esc_attr( $hero_button_2_target ); ?>"><?php echo esc_html( $hero_button_2_title ); ?></a>
+								</button>
+							</div>
+						</div>
+						<div class="ks-content__column">
+							<div class="ks-content__swiper-container">
+								<div class="swiper-wrapper">
+									<?php
+									$materials_articles = get_field('materials_articles');
+									$materials_articles_count = count($materials_articles);
+									$slide_size = 5;
+									$materials_chunks = array_chunk($materials_articles, $slide_size, true);
+									foreach ($materials_chunks as $key => $chunk) {
+										?>
+											<div class="swiper-slide">
+												<div class="links">	
+													<?php
+														foreach ($chunk as $key => $article) {
+															?>
+																<a class="ks-button ks-button--custom" href="<?php echo esc_url( $article['materials_single_article']['url'] ); ?>" target="<?php echo esc_attr( $$article['materials_single_article']['target'] ); ?>"><?php echo esc_html( $article['materials_single_article']['title'] ); ?></a>
+															<?php
+														}
+													?>
+												</div>
+											</div>
+										<?php
+									}
+									?>
+								</div>
+								<div class="ks-content__swiper-pagination"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
