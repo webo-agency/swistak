@@ -62,4 +62,8 @@ img {
             margin-right: 40px;
         }
     }
+
+    &--no-shadow {
+        filter: none;
+    }
 }
