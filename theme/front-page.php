@@ -232,7 +232,7 @@ endif;
 					</div>
 				</div>
 			</section>
-			
+
 			<section id="ks-content" class="ks-content">
 				<div class="ks-container">
 					<?php echo the_field('materials_heading'); ?>
@@ -259,7 +259,7 @@ endif;
 									foreach ($materials_chunks as $key => $chunk) {
 										?>
 											<div class="swiper-slide">
-												<div class="links">	
+												<div class="ks-content__links">	
 													<?php
 														foreach ($chunk as $key => $article) {
 															?>
