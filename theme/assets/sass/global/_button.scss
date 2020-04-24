@@ -3,13 +3,14 @@
     background: transparent;
     padding: 5px 10px;
     border-radius: $base-border-radius;
-    width: 174px;
-    height: 50px;
     transition: background .3s;
+    position: relative;
 
     &--primary {
         background: $color-primary;
         color: $color-white;
+        width: 174px;
+        height: 50px;
 
         a {
             color: $color-white;
@@ -24,6 +25,14 @@
         display: flex;
         align-items: center;
         padding: 0;
+    
+        &::before {
+            margin-right: 10px;
+
+            @include media-screen(tablet) {
+                margin-right: 15px;
+            }
+        }
 
         &--primary {
             color: $color-dark;
@@ -34,11 +43,83 @@
     
             &::before {
                 content: url('../../../images/play-1.png');
-                margin-right: 10px;
+            }
+        }
+
+        &--white {
+            color: $color-white;
+
+            a {
+                color: $color-white;
+            }
     
-                @include media-screen(tablet) {
-                    margin-right: 15px;
-                }
+            &::before {
+                content: url('../../../images/play-1.png');
+            }
+        }
+    }
+
+    &--custom {
+        display: block;
+        font-size: $size-normal;
+        line-height: $line-height-normal;
+        font-weight: $weight-semi-bold;
+        border-radius: $base-border-radius;
+        padding: 20px;
+        background: $color-gray-light-3;
+        transition: background .1s;
+        color: $color-dark;
+        
+        a {
+            color: $color-dark;
+        }
+
+        width: 100%;
+        text-align: left;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        @include media-screen(desktop) {
+            font-size: $size-big;
+            line-height: $line-height-normal;
+        }
+            
+        &::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 50%;
+            width: 20px;
+            height: 3px;
+            background: $color-primary;
+        }
+
+        &::after {
+            content: url('../../../../assets/images/arrow-right-green.svg');
+            font-size: 30px;
+            fill: $color-primary;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &:hover {
+            background: $color-primary;
+            color: $color-white;
+
+            a {
+                color: $color-white;
+            }
+
+            &::before{
+                background: $color-gray-light-4;
+            }
+            
+            &::after {
+                content: url('../../../../assets/images/arrow-right-white.svg');
             }
         }
     }
