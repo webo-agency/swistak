@@ -55,7 +55,7 @@ endif;
 				<div class="ks-hero__container">
 					<div class="ks-container">
 						<div class="ks-hero__content">
-							<h1 class="ks-text-with-wave"><?php echo the_field('hero_title'); ?></h1>
+							<?php echo the_field('hero_title'); ?>
 							<p><?php echo the_field('hero_description'); ?></p>
 							<div class="ks-hero__buttons">
 								<button class="ks-button ks-button--primary">
@@ -76,7 +76,7 @@ endif;
 						<div class="ks-image ks-image--big">
 							<img  src="<?php echo $about_img['url']; ?>" alt="<?php echo $about_img['alt']; ?>" alt="<?php echo $about_img['title']; ?>" />
 						</div>
-						<div class="ks-about__content">
+						<div class="ks-about__content ks-decoration ks-decoration--left">
 							<div><?php echo the_field('about_heading'); ?></div>
 
 							<div class="ks-about__facilities">
@@ -119,7 +119,7 @@ endif;
 							</div>
 						</div>
 					</div>
-					<div class="ks-help__facilities">
+					<div class="ks-help__facilities ks-decoration ks-decoration--center">
 						<?php
 							if( have_rows('help_facilities') ):
 								while ( have_rows('help_facilities') ) : the_row();
@@ -146,7 +146,7 @@ endif;
 			<section id="ks-strategy" class="ks-strategy">
 				<div class="ks-container">
 					<div class="ks-strategy__container">
-						<div class="ks-strategy__column ks-strategy__column--content">
+						<div class="ks-strategy__column ks-strategy__column--content ks-decoration ks-decoration--left">
 							<?php echo the_field('strategy_heading'); ?>
 							<p class="ks-facility__title"><?php echo the_field('strategy_heading_2'); ?></p>
 							<?php echo the_field('strategy_content'); ?>
