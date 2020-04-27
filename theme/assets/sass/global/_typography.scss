@@ -30,6 +30,7 @@ h1 {
     font-size: $size-large-2;
     font-weight: $weight-extra-bold;
     line-height: $line-height-large;
+    position: relative;
     
     @include media-screen(tablet-wide) {
         font-size: $size-large-3;
@@ -40,6 +41,7 @@ h2 {
     font-size: $size-large;
     line-height: $line-height-big;
     font-weight: $weight-extra-bold;
+    position: relative;
     
     @include media-screen(tablet-wide) {
         font-size: $size-large-2;
