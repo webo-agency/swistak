@@ -35,6 +35,7 @@
         max-width: 100%;
 
         &--content {
+            position: relative;
 
             @include media-screen(tablet) {
                 flex: 0 0 50%;
