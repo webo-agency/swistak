@@ -233,6 +233,37 @@ endif;
 				</div>
 			</section>
 
+			<section id="ks-clients" class="ks-clients">
+				<div class="ks-container">
+					<?php echo the_field('clients_heading'); ?>
+					<?php
+						$clients_brands = get_field('clients_brands');
+						$clients_brands_count = count($clients_brands);
+						$board_size = 8;
+						$clients_chunks = array_chunk($clients_brands, $board_size, true);
+						foreach ($clients_chunks as $key => $chunk) {
+							?>
+							<div class="ks-clients__board">
+										<?php
+											foreach ($chunk as $key => $brand) {
+												?>
+													<div class="ks-clients__logotype">
+														<div class="ks-clients-logotype-img">
+															<a href="<?php echo $brand['client_url']['url']; ?>" target="<?php echo $brand['client_url']['target']; ?>">
+																<img src="<?php echo $brand['clients_brand_logotype']['url']; ?>" alt="<?php echo $brand['clients_brand_logotype']['alt']; ?>" />
+															</a>
+														</div>
+													</div>
+												<?php
+											}
+										?>
+								</div>
+							<?php
+						}
+					?>
+				</div>
+			</section>
+
 			<section id="ks-content" class="ks-content">
 				<div class="ks-container">
 					<?php echo the_field('materials_heading'); ?>
