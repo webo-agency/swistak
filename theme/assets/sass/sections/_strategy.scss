@@ -18,7 +18,6 @@
         }
 
         h2 {
-            margin-bottom: 30px;
 
             @include media-screen(tablet) {
                 margin-bottom: 90px;
@@ -49,11 +48,13 @@
         }
 
         &--image {
+            margin-top: 30px;
 
             @include media-screen(tablet) {
                 flex: 0 0 50%;
                 max-width: 50%;
                 text-align: right;
+                margin-top: 0;
             }
 
             @include media-screen(desktop) {

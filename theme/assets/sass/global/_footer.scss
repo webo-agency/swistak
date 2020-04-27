@@ -30,10 +30,6 @@
     }
 
     h2 {
-        font-size: $size-large;
-        font-weight: $weight-extra-bold;
-        line-height: $line-height-big;
-        margin-bottom: 30px;
         
         @include media-screen(tablet-wide) {
             line-height: $line-height-large;

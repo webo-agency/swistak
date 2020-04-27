@@ -22,7 +22,6 @@
     h2 {
         font-size: $size-big;
         line-height: $line-height-normal;
-        margin-bottom: 40px;
 
         @include media-screen(tablet) {
             font-size: $size-large;

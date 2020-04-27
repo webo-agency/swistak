@@ -32,11 +32,6 @@
     }
     
     h2 {
-        margin-bottom: 20px;
-
-        @include media-screen(tablet) {
-            margin-bottom: 50px;
-        }
 
         @include media-screen(desktop) {
             margin-bottom: 105px;
