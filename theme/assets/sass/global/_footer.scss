@@ -1,8 +1,33 @@
 .ks-footer {
 
     &__bg {
-        background: url('../../../images/bgfooter.png') center center no-repeat;
+        background: url('../../../images/bgfooter.png') 65% center no-repeat;
         background-size: cover;
+        position: relative;
+
+        .ks-container {
+            position: relative;
+            z-index: 10;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,.8);
+            z-index: 1;
+        }
+
+        @include media-screen(tablet) {
+            background: url('../../../images/bgfooter.png') center center no-repeat;
+
+            &::after {
+                display: none;
+            }
+        }
     }
 
     &__content {
