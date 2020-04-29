@@ -45,8 +45,20 @@
 					?>
 					<div class="ks-contact-info">
 						<div class="ks-contact-info__social-media">
-							<a href="#"><img src="<?php echo get_template_directory_uri() . '/assets/images/linkedin-icon.png' ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
-							<a href="#"><img src="<?php echo get_template_directory_uri() . '/assets/images/fb-icon.png' ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
+						<?php
+							if( have_rows('social_images', 'option') ):
+								while ( have_rows('social_images', 'option') ) : the_row();
+									$image = get_sub_field('social_image');
+									$link = get_sub_field('social_url');
+									?>	
+									<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>">
+										<img class="ks-social-img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" alt="<?php echo $image['title']; ?>" />
+									</a>
+									<?php
+								endwhile;
+							else :
+							endif;
+						?>
 						</div>
 						<button class="ks-button ks-button--primary">Skontaktuj się</button>
 					</div>
