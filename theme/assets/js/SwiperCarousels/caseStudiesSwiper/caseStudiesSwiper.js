@@ -4,6 +4,7 @@ export const caseStudiesSwiper = new Swiper ('.swiper-container', {
         prevEl: '.swiper-button-prev',
     },
     pagination: {
-        el: '.ks-case-studies__swiper-pagination'
+        el: '.ks-case-studies__swiper-pagination',
+        clickable: true,
     }
 });
