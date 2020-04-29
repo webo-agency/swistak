@@ -8,7 +8,7 @@ class Line {
         const line = document.createElement('div');
         line.classList.add('ks-decoration__line');
         line.classList.add(`ks-decoration__line--${this.type}`);
-        line.style.rotate = `${this.degree}deg`;
+        line.style.transform = `rotate(${this.degree}deg)`;
         return line;
     }
 }
