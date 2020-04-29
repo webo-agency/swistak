@@ -2,6 +2,12 @@
     background: url('../../../images/hero.png') 70% center no-repeat;
     background-size: cover;
     height: 100vh;
+    background-color: $color-gray-4; 
+    background-blend-mode: screen;
+
+    @include media-screen(tablet) {
+        background-blend-mode: normal;
+    }
     
     &__buttons {
         display: flex;
