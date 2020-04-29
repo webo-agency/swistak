@@ -35,6 +35,10 @@
 
     .acf-field-textarea {
         margin-bottom: 20px!important;
+        
+        textarea {
+            resize: none;
+        }
     }
 }
 
