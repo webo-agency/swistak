@@ -27,13 +27,19 @@ a {
 }
 
 h1 {
-    font-size: $size-large-2;
+    font-size: $size-big;
     font-weight: $weight-extra-bold;
-    line-height: $line-height-large;
+    line-height: $line-height-normal;
     position: relative;
+
+    @include media-screen(phone-wide) {
+        font-size: $size-large;
+        line-height: $line-height-big;
+    }
 
     @include media-screen(tablet-wide) {
         font-size: $size-large-3;
+        line-height: $line-height-large;
     }
 }
 

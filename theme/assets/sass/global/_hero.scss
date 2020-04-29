@@ -48,13 +48,6 @@
 
         h1 {
             margin-bottom: 50px;
-            font-size: 20px;
-            line-height: 25px;
-
-            @include media-screen(phone-wide) {
-                font-size: 30px;
-                line-height: 35px;
-            }
     
             @include media-screen(tablet-wide) {
                 margin-bottom: 70px;
