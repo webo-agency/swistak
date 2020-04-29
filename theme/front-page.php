@@ -310,6 +310,14 @@ endif;
 					</div>
 				</div>
 			</section>
+			
+			<div id="ks-video-popup" class="ks-popup">
+				<div class="ks-popup__content">
+					<?php echo the_field('main_page_video'); ?>
+				</div>
+				<div class="ks-overlay"></div>
+			</div>
+			
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
