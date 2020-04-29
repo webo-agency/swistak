@@ -23,6 +23,7 @@
 
         @include media-screen(tablet) {
             background: url('../../../images/bgfooter.png') center center no-repeat;
+            background-size: cover;
 
             &::after {
                 display: none;
