@@ -4,6 +4,7 @@ import { caseStudiesSwiperIndexCounter }  from './SwiperCarousels/caseStudiesSwi
 import { recommendationsSwiper }  from './SwiperCarousels/RecommendationSwiper/recommendationSwiper';
 import { contentSwiper } from './SwiperCarousels/ContentSwiper/contentSwiper';
 import VideoHandler from './Video/VideoHandler';
+import FormRodo from './FormRodo/FormRodo';
 
 caseStudiesSwiperIndexCounter.initSwiper();
 
@@ -12,3 +13,6 @@ wavesStore.render();
 
 const video = new VideoHandler();
 video.init();
+
+const rodo = new FormRodo();
+rodo.init();
