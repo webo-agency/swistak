@@ -9,10 +9,11 @@
             margin-right: 16px;
         }
 
-        &:focus-within {
+        &:focus-within,
+        &.active {
 
             .acf-label {
-                transform: translate(0, -5px);
+                transform: translate(0, -15px);
 
                 label {
                     color: $color-primary;
@@ -26,7 +27,7 @@
     .acf-field-email {
         display: inline-block;
         width: 100%;
-        margin-bottom: 35px!important;
+        margin-bottom: 38px!important;
 
         @include media-screen(tablet) {
             width: calc(50% - 10px);
@@ -76,4 +77,9 @@
             }
         }
     }
+}
+
+.acf-button {
+    width: 182px;
+    height: 57px;
 }
