@@ -6,7 +6,7 @@
     &__bar {
         display: flex;
         flex-direction: column;
-        padding: 20px 0;
+        padding: 29px 0 20px;
 
         @include media-screen(tablet) {
             flex-direction: row;
@@ -16,6 +16,7 @@
 
     .main-navigation {
         overflow: hidden;
+        margin-top: -4px;
 
         &.toggled {
 
@@ -82,13 +83,13 @@
                     display: inline-block;
     
                     @include media-screen(desktop) {
-                        margin-right: 30px;
+                        margin-right: 20px;
                     }
 
                     a {
 
                         &:first-child {
-                            margin-right: 10px;
+                            margin-right: 5px;
                         }
                     }
                 }
@@ -108,12 +109,27 @@
                 }
     
                 @include media-screen(desktop) {
-                    margin-right: 30px;
+                    margin-right: 22px;
+                }
+
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 0;
+                    background: $color-primary;
+                    height: 2px;
+                    transition: width .5s ease-out;
+                    margin-top: -3px;
+                }
+
+                &:hover::after {
+                    width: 100%;
                 }
     
                 a {
                     color: $color-black;
                     font-size: $size-small-2;
+                    transition: color .1s ease-out;
 
                     &:hover {
                         color: $color-primary;
