@@ -30,13 +30,15 @@
 
     &--phone {
         &::before {
-            content: url('../../../images/phone-call.png');
+            content: url('../../../svg/phone-call.svg');
+            width: 50px;
         }
     }
 
     &--email {
         &::before {
-            content: url('../../../images/email.png');
+            content: url('../../../svg/email.svg');
+            width: 50px;
         }
     }
 }
