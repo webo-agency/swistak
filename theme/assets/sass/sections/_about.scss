@@ -2,7 +2,7 @@
     padding: 75px 0 35px;
 
     @include media-screen(desktop) {
-        padding: 155px 0 45px;
+        padding: 155px 0 75px;
     }
 
     .ks-image {
@@ -30,7 +30,31 @@
         }
 
         @include media-screen(desktop) {
-            margin-bottom: 110px;
+            margin-bottom: 97px;
+        }
+    }
+
+    .ks-facility {
+
+        &:first-child {
+
+            @include media-screen(desktop) {
+                margin-right: 50px;
+            }
+        }
+
+        &:nth-child(2) {
+
+            @include media-screen(desktop) {
+                margin-right: 13px;
+            }
+        }
+
+        &:nth-child(3) {
+
+            @include media-screen(desktop) {
+                margin-right: -72px;
+            }
         }
     }
 
@@ -48,7 +72,7 @@
     &__facilities {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 65px;
+        margin-bottom: 50px;
         flex-direction: column;
         text-align: center;
 
@@ -67,5 +91,6 @@
 
     &__content {
         position: relative;
+        margin-top: -5px;
     }
 }
