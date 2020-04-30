@@ -37,10 +37,10 @@ endif;
 						<h2 class="ks-util-color-primary"><?php echo get_field('footer_heading', 'option'); ?></h2>
 					</div>
 					<div class="ks-contact-label ks-contact-label--phone">
-						<a href="<?php echo esc_url( $footer_email_url ); ?>" target="<?php echo esc_attr( $footer_email_target ); ?>"><?php echo esc_html( $footer_email_title ); ?></a>
+						<a href="<?php echo esc_url( $footer_phone_url ); ?>" target="<?php echo esc_attr( $footer_phone_target ); ?>"><?php echo esc_html( $footer_phone_title ); ?></a>
 					</div>
 					<div class="ks-contact-label ks-contact-label--email">
-						<a href="<?php echo esc_url( $footer_phone_url ); ?>" target="<?php echo esc_attr( $footer_phone_target ); ?>"><?php echo esc_html( $footer_phone_title ); ?></a>
+						<a href="<?php echo esc_url( $footer_email_url ); ?>" target="<?php echo esc_attr( $footer_email_target ); ?>"><?php echo esc_html( $footer_email_title ); ?></a>
 					</div>
 					<div class="ks-form">
 						<?php 
