@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1447746f59433785fd8e828e60ac4a08",
+    "content-hash": "a9bf5f240e504ce23afd9cf7b0d979b6",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -575,7 +575,7 @@
             "dist": {
                 "type": "path",
                 "url": "theme",
-                "reference": "a815d137bb27129c4eecc49088e42e7d4c1b92d2"
+                "reference": "f371588a1d08cba3a6ed9e4d1950c5deb375ddd2"
             },
             "require": {
                 "composer/installers": "^1.4",
@@ -587,8 +587,7 @@
             ],
             "description": "Theme",
             "transport-options": {
-                "symlink": false,
-                "relative": true
+                "symlink": false
             }
         },
         {
@@ -662,6 +661,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/litespeed-cache/"
+        },
+        {
+            "name": "wpackagist-plugin/svg-support",
+            "version": "2.3.18",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/svg-support/",
+                "reference": "tags/2.3.18"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/svg-support.2.3.18.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/svg-support/"
         }
     ],
     "packages-dev": [],
