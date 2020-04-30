@@ -1,7 +1,7 @@
 
 export const recommendationsSwiper = new Swiper('.ks-recommendations__swiper-container', {
     slidesPerView: 1,
-    spaceBetween: 70,
+    spaceBetween: 95,
     pagination: {
         el: '.ks-recommendations__swiper-pagination',
         clickable: true,
