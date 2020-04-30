@@ -4,7 +4,7 @@ import WaveGenerator from '../Generator/WaveGenerator';
 class WavesStore {
     constructor() {
         this.smallWave = new Wave(45, 'small', 7);
-        this.bigWave = new Wave(45, 'big', 7);
+        this.bigWave = new Wave(45, 'big', 9);
         this.tags = [
             { id: 0, elements: document.getElementsByTagName('h1'), waveType: this.smallWave },
             { id: 1, elements: document.getElementsByTagName('h2'), waveType: this.smallWave },
