@@ -14,11 +14,11 @@ p {
     margin-bottom: 10px;
 
     @include media-screen(tablet) {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     @include media-screen(desktop) {
-        margin-bottom: 35px;
+        margin-bottom: 25px;
     }
 }
 
