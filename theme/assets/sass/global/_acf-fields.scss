@@ -40,6 +40,17 @@
             resize: none;
         }
     }
+
+    .acf-field-checkbox {
+
+        .acf-label {
+            display: none;
+        }
+
+        .ks-input {
+            border: none;
+        }
+    }
 }
 
 .site {
