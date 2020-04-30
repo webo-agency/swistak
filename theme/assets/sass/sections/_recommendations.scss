@@ -1,7 +1,7 @@
 .ks-recommendations {
     background: url('../../../images/bg-recommendations.png') center center no-repeat;
     background-size: cover;
-    padding: 80px 0 135px;
+    padding: 64px 0 135px;
 
     &__swiper-container {
         overflow: hidden;
@@ -15,7 +15,7 @@
     h2 {
 
         @include media-screen(desktop) {
-            margin-bottom: 100px;
+            margin-bottom: 46px;
         }
     }
 }

@@ -57,7 +57,7 @@ img {
         @include filter-shadow($drop-shadow-size-2, $color-shadow);
         max-width: 130px;
         max-height: 160px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
 
         @include media-screen(phone-wide) {
             margin-right: 40px;
