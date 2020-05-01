@@ -6,17 +6,22 @@ import { contentSwiper } from './SwiperCarousels/ContentSwiper/contentSwiper';
 import VideoHandler from './Video/VideoHandler';
 import FormRodo from './Form/FormRodo/FormRodo';
 import FormLabel from './Form/FormLabel/FormLabel';
+import HeaderPosition from './HeaderPosition/HeaderPosition';
 
-caseStudiesSwiperIndexCounter.initSwiper();
+const rootScript = {
+    wavesStore: new WavesStore(),
+    video: new VideoHandler(),
+    rodo: new FormRodo(),
+    formLabel: new FormLabel(),
+    header: new HeaderPosition(),
+    init: function() {
+        caseStudiesSwiperIndexCounter.initSwiper();
+        this.wavesStore.render();
+        this.video.init();
+        this.rodo.init();
+        this.formLabel.eachInputInit();
+        this.header.scrollPage();
+    }
+}
 
-const wavesStore = new WavesStore();
-wavesStore.render();
-
-const video = new VideoHandler();
-video.init();
-
-const rodo = new FormRodo();
-rodo.init();
-
-const formLabel = new FormLabel();
-formLabel.eachInputInit();
+rootScript.init();
