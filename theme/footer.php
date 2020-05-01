@@ -77,6 +77,7 @@ endif;
 </div>
 
 <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+<script src="<?php echo get_template_directory_uri() . '/assets/js/anchor-scroll-master/scroll.min.js' ?>"></script>
 <?php wp_footer(); ?>
 </body>
 </html>
