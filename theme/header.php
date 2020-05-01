@@ -60,7 +60,9 @@
 							endif;
 						?>
 						</div>
-						<button class="ks-button ks-button--primary">Skontaktuj się</button>
+						<button class="ks-button ks-button--primary">
+							<a class="scroll" href="#colophon">Skontaktuj się</a>
+						</button>
 					</div>
 				</div>
 				</nav><!-- #site-navigation -->

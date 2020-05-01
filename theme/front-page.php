@@ -59,7 +59,7 @@ endif;
 							<p><?php echo the_field('hero_description'); ?></p>
 							<div class="ks-hero__buttons">
 								<button class="ks-button ks-button--primary">
-									<a href="<?php echo esc_url( $hero_button_1_url ); ?>" target="<?php echo esc_attr( $hero_button_1_target ); ?>"><?php echo esc_html( $hero_button_1_title ); ?></a>
+									<a class="scroll" href="<?php echo esc_url( $hero_button_1_url ); ?>" target="<?php echo esc_attr( $hero_button_1_target ); ?>"><?php echo esc_html( $hero_button_1_title ); ?></a>
 								</button>
 								<button class="ks-button ks-button__video ks-button__video--primary">
 									<a href="<?php echo esc_url( $hero_button_2_url ); ?>" target="<?php echo esc_attr( $hero_button_2_target ); ?>"><?php echo esc_html( $hero_button_2_title ); ?></a>
