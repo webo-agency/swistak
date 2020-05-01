@@ -191,3 +191,9 @@ add_action('wp_enqueue_scripts', 'swistak_theme_styles_and_scripts');
 if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();
 }
+
+function add_menu_items_classname( $atts, $item, $args ) {
+	$atts['class'] = 'scroll';
+    return $atts;
+}
+add_filter( 'nav_menu_link_attributes', 'add_menu_items_classname', 10, 3 );
