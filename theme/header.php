@@ -25,8 +25,8 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<div class="ks-container ks-header">
-		<header id="masthead" class="site-header">
+	<div class="ks-header">
+		<header id="masthead" class="ks-container site-header">
 			<div class="ks-header__bar">
 				<div class="site-branding">
 					<?php the_custom_logo(); ?>
