@@ -29,7 +29,7 @@
 		menu.className += ' nav-menu';
 	}
 
-	button.onclick = function() {
+	function toggleMenuContainer() {
 		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
 			container.className = container.className.replace( ' toggled', '' );
 			button.setAttribute( 'aria-expanded', 'false' );
@@ -37,8 +37,12 @@
 		} else {
 			container.className += ' toggled';
 			button.setAttribute( 'aria-expanded', 'true' );
-			button.textContent = 'Close';
+			button.textContent = 'Zamknij';
 		}
+	}
+
+	button.onclick = function() {
+		toggleMenuContainer();
 	};
 
 	// Close small menu when user clicks outside
@@ -58,17 +62,7 @@
 	for ( i = 0, len = links.length; i < len; i++ ) {
 		links[i].addEventListener( 'focus', toggleFocus, true );
 		links[i].addEventListener( 'blur', toggleFocus, true );
-		links[i].addEventListener('click', function() {
-			if ( -1 !== container.className.indexOf( 'toggled' ) ) {
-				container.className = container.className.replace( ' toggled', '' );
-				button.setAttribute( 'aria-expanded', 'false' );
-				button.textContent = 'Menu';
-			} else {
-				container.className += ' toggled';
-				button.setAttribute( 'aria-expanded', 'true' );
-				button.textContent = 'Close';
-			}
-		})
+		links[i].addEventListener('click', toggleMenuContainer, true)
 	}
 
 	/**
