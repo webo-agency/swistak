@@ -1,9 +1,9 @@
 .ks-strategy {
     background: url('../../../images/bg-strategy.png') center center no-repeat;
     background-size: cover;
-    padding: 30px 0 40px;
+    padding: 60px 0;
 
-    @include media-screen(tablet) {
+    @include media-screen(desktop) {
         padding: 56px 0 40px;
     }
 
