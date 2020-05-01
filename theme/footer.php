@@ -26,9 +26,9 @@ endif;
 
 	</div>
 
-	<footer id="colophon" class="site-footer ks-footer">
+	<footer id="colophon" class="site-footer ks-footer ks-fade">
 		<div class="ks-footer__bg">
-			<div class="ks-container">
+			<div class="ks-container ks-fadeInBottom">
 				<div class="ks-footer__content">
 					<div>
 						<p><?php echo get_field('footer_text', 'option'); ?></p>

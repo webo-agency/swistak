@@ -70,8 +70,8 @@ endif;
 				</div>
 			</section>
 
-			<section id="ks-about" class="ks-background-shape ks-background-shape__square ks-about">
-				<div class="ks-container">
+			<section id="ks-about" class="ks-background-shape ks-background-shape__square ks-about ks-fade">
+				<div class="ks-container ks-fadeInBottom">
 					<div class="ks-about__inner">
 						<div class="ks-image ks-image--big">
 							<img  src="<?php echo $about_img['url']; ?>" alt="<?php echo $about_img['alt']; ?>" alt="<?php echo $about_img['title']; ?>" />
@@ -103,8 +103,8 @@ endif;
 				</div>
 			</section>
 			
-			<section id="ks-how-do-i-help" class="ks-help ks-background-shape ks-background-shape__rectangle">
-				<div class="ks-container">
+			<section id="ks-how-do-i-help" class="ks-help ks-background-shape ks-background-shape__rectangle ks-fade">
+				<div class="ks-container ks-fadeInBottom">
 					<div class="ks-help__info">
 						<div class="ks-help__content">
 							<?php echo the_field('help_heading'); ?>
@@ -143,8 +143,8 @@ endif;
 				</div>
 			</section>
 
-			<section id="ks-strategy" class="ks-strategy">
-				<div class="ks-container">
+			<section id="ks-strategy" class="ks-strategy ks-fade">
+				<div class="ks-container ks-fadeInBottom">
 					<div class="ks-strategy__container">
 						<div class="ks-strategy__column ks-strategy__column--content ks-decoration ks-decoration--left">
 							<?php echo the_field('strategy_heading'); ?>
@@ -158,8 +158,8 @@ endif;
 				</div>
 			</section>
 			
-			<section id="ks-case-studies" class="ks-case-studies">
-				<div class="ks-container">
+			<section id="ks-case-studies" class="ks-case-studies ks-fade">
+				<div class="ks-container ks-fadeInBottom">
 					<?php echo the_field('case_studies_heading'); ?>
 					<div class="ks-swiper ks-swiper--shadow">
 						<div class="swiper-container ks-swiper__case-studies">
@@ -193,8 +193,8 @@ endif;
 				</div>
 			</section>
 
-			<section id="ks-recommendations" class="ks-recommendations">
-				<div class="ks-container">
+			<section id="ks-recommendations" class="ks-recommendations ks-fade">
+				<div class="ks-container ks-fadeInBottom">
 					<?php echo the_field('recommendations_heading'); ?>
 					<div class="ks-swiper">
 						<div class="ks-recommendations__swiper-container">
@@ -233,8 +233,8 @@ endif;
 				</div>
 			</section>
 
-			<section id="ks-clients" class="ks-clients">
-				<div class="ks-container">
+			<section id="ks-clients" class="ks-clients ks-fade">
+				<div class="ks-container ks-fadeInBottom">
 					<?php echo the_field('clients_heading'); ?>
 					<?php
 						$clients_brands = get_field('clients_brands');
@@ -264,8 +264,8 @@ endif;
 				</div>
 			</section>
 
-			<section id="ks-content" class="ks-content">
-				<div class="ks-container">
+			<section id="ks-content" class="ks-content ks-fade">
+				<div class="ks-container ks-fadeInBottom">
 					<?php echo the_field('materials_heading'); ?>
 					<?php echo the_field('materials_description'); ?>
 					<div class="ks-content__container">
