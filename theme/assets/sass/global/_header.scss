@@ -2,11 +2,27 @@
     position: absolute;
     left: 0;
     right: 0;
+    z-index: 99999;
+    transform: translateY(0);
+    transition: transform .4s;
+
+    &__fixed {
+        @include media-screen(tablet) {
+            transition: transform .4s;
+            position: fixed;
+            background: $color-gray-light-4;
+
+            .ks-header__bar {
+                padding: 10px 0;
+            }
+        }
+    }
 
     &__bar {
         display: flex;
         flex-direction: column;
         padding: 29px 0 20px;
+        transition: padding .4s;
 
         @include media-screen(tablet) {
             flex-direction: row;
