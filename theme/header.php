@@ -61,7 +61,7 @@
 						?>
 						</div>
 						<button class="ks-button ks-button--primary">
-							<a class="scroll" href="#colophon">Skontaktuj się</a>
+							<a class="scroll" href="#kontakt">Skontaktuj się</a>
 						</button>
 					</div>
 				</div>

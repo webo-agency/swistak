@@ -26,7 +26,7 @@ endif;
 
 	</div>
 
-	<footer id="colophon" class="site-footer ks-footer ks-fade">
+	<footer id="kontakt" class="site-footer ks-footer ks-fade">
 		<div class="ks-footer__bg">
 			<div class="ks-container ks-fadeInBottom">
 				<div class="ks-footer__content">
