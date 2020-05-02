@@ -33,9 +33,11 @@
 		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
 			container.className = container.className.replace( ' toggled', '' );
 			button.setAttribute( 'aria-expanded', 'false' );
+			button.classList.remove('ks-menu-toggler--active');
 		} else {
 			container.className += ' toggled';
 			button.setAttribute( 'aria-expanded', 'true' );
+			button.classList.add('ks-menu-toggler--active');
 		}
 	}
 
