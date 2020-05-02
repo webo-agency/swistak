@@ -2,12 +2,33 @@
     border: none;
     background: none;
     position: fixed;
-    right: 3px;
+    right: 10px;
     z-index: 99999;
     color: $color-primary;
     transform: translateY(-40px);
+    width: 40px;
+    height: 43px;
 
     @include media-screen(tablet) {
         display: none;
+    }
+
+    &__line {
+        width: 100%;
+        background: $color-primary;
+        height: 5px;
+        border-radius: 5px;
+        display: block;
+        position: absolute;
+        left: 0;
+        border-radius: 5px;
+
+        &:nth-child(2) {
+            top: 7px;
+        }
+    
+        &:nth-child(3) {
+            top: 14px;
+        }
     }
 }
