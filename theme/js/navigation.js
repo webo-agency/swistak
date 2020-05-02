@@ -33,11 +33,9 @@
 		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
 			container.className = container.className.replace( ' toggled', '' );
 			button.setAttribute( 'aria-expanded', 'false' );
-			button.textContent = 'Menu';
 		} else {
 			container.className += ' toggled';
 			button.setAttribute( 'aria-expanded', 'true' );
-			button.textContent = 'Zamknij';
 		}
 	}
 
