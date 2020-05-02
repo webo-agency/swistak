@@ -4,6 +4,11 @@
     right: 0;
     z-index: 99999;
 
+    .custom-logo {
+        height: 40px;
+        width: 110px;
+    }
+
     &__fixed {
         @include media-screen(tablet) {
             position: fixed;
