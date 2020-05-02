@@ -33,7 +33,11 @@
 				</div><!-- .site-branding -->
 
 				<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle ks-menu-toggler" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'swistak-theme' ); ?></button>
+				<button class="menu-toggle ks-menu-toggler" aria-controls="primary-menu" aria-expanded="false">
+					<div class="ks-menu-toggler__line"></div>
+					<div class="ks-menu-toggler__line"></div>
+					<div class="ks-menu-toggler__line"></div>
+				</button>
 				<div class="ks-menu-items-container">
 					<?php
 					wp_nav_menu(
