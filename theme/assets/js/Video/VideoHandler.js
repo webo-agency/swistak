@@ -4,9 +4,9 @@ class Video {
         this.popupClassName = 'ks-popup';
         this.buttons = document.querySelectorAll('.ks-button__video a');
         this.videoId = document.getElementById('ks-video-popup');
-        this.videoIframe = document.querySelector('#ks-video-popup iframe');
         this.allOverlays = document.querySelectorAll('.ks-popup .ks-overlay');
-        this.videoSource = `${this.videoIframe.src}&amp;autoplay=1`;
+        this.videoIframe = false;
+        this.videoSource = false;
         this.isVideoRunning = false;
     }
 
@@ -36,9 +36,16 @@ class Video {
     };
 
     init() {
+      this.videoIframe = document.querySelector('#ks-video-popup iframe');
+      if(this.videoIframe != null) {
+        this.videoSource = `${this.videoIframe.src}&amp;autoplay=1`;
         this.toggleVideo();
         this.hideOnOverlayClick();
         this.renderVideoSrc();
+      }
+      else {
+        return;
+      }
     }
 }
 
