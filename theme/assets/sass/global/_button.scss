@@ -28,11 +28,16 @@
         align-items: center;
         padding: 0;
     
-        &::before {
-            margin-right: 10px;
+        a {
+            display: flex;
+            align-items: center;
 
-            @include media-screen(tablet) {
-                margin-right: 15px;
+            &::before {
+                margin-right: 10px;
+    
+                @include media-screen(tablet) {
+                    margin-right: 15px;
+                }
             }
         }
 
@@ -41,10 +46,10 @@
             
             a {
                 color: $color-dark;
-            }
     
-            &::before {
-                content: url('../../../images/video-icon-green.png');
+                &::before {
+                    content: url('../../../images/video-icon-green.png');
+                }
             }
         }
 
@@ -53,10 +58,10 @@
 
             a {
                 color: $color-white;
-            }
     
-            &::before {
-                content: url('../../../images/video-icon-white.png');
+                &::before {
+                    content: url('../../../images/video-icon-white.png');
+                }
             }
         }
     }
