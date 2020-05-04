@@ -47,9 +47,18 @@
         align-items: center;
 
         h1 {
+            font-size: $size-big;
+            line-height: $line-height-normal;
             margin-bottom: 50px;
-    
+        
+            @include media-screen(phone-wide) {
+                font-size: $size-large;
+                line-height: $line-height-big;
+            }
+        
             @include media-screen(tablet-wide) {
+                font-size: $size-large-3;
+                line-height: $line-height-large;
                 margin-bottom: 62px;
             }
         }
