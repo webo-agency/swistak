@@ -11,6 +11,7 @@ import FadeInBottom from './FadeAnimation/FadeInBottom';
 
 const rootScript = {
     wavesStore: new WavesStore(),
+    video: new VideoHandler(),
     rodo: new FormRodo(),
     formLabel: new FormLabel(),
     header: new HeaderPosition(),
@@ -18,6 +19,7 @@ const rootScript = {
     init: function() {
         caseStudiesSwiperIndexCounter.initSwiper();
         this.wavesStore.render();
+        this.video.init();
         this.rodo.init();
         this.formLabel.eachInputInit();
         this.header.scrollPage();
