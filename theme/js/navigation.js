@@ -45,6 +45,11 @@
 		toggleMenuContainer();
 	};
 
+	var contactMenuButton = document.querySelector('.ks-button--primary .scroll');
+	contactMenuButton.addEventListener('click', function() {
+		toggleMenuContainer();
+	})
+
 	// Close small menu when user clicks outside
 	document.addEventListener( 'click', function( event ) {
 		var isClickInside = container.contains( event.target );
