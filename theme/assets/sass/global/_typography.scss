@@ -27,19 +27,15 @@ a {
 }
 
 h1 {
-    font-size: $size-big;
+    font-size: $size-large-2;
     font-weight: $weight-extra-bold;
-    line-height: $line-height-normal;
+    line-height: $line-height-large;
     position: relative;
-
-    @include media-screen(phone-wide) {
-        font-size: $size-large;
-        line-height: $line-height-big;
-    }
+    margin-bottom: 80px;
 
     @include media-screen(tablet-wide) {
         font-size: $size-large-3;
-        line-height: $line-height-large;
+        margin-bottom: 100px;
     }
 }
 
