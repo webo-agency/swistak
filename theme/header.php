@@ -9,6 +9,17 @@
  * @package Swistak_Theme
  */
 
+ function getPageClassName() {
+	$classname;
+	if ( is_front_page() ) {
+		$classname = 'ks-front-page';
+	}
+	else {
+		$classname = 'ks-page';
+	}
+	return $classname;
+ }
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -24,7 +35,7 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="site">
+<div id="page" class="<?php echo getPageClassName(); ?> site">
 	<div class="ks-header">
 		<header id="masthead" class="ks-container site-header">
 			<div class="ks-header__bar">
