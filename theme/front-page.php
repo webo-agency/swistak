@@ -294,7 +294,7 @@ endif;
 													<?php
 														foreach ($chunk as $key => $article) {
 															?>
-																<a class="ks-button ks-button--custom" href="<?php echo esc_url( $article['materials_single_article']['url'] ); ?>" target="<?php echo esc_attr( $$article['materials_single_article']['target'] ); ?>"><?php echo esc_html( $article['materials_single_article']['title'] ); ?></a>
+																<a class="ks-button ks-button--custom" href="<?php echo esc_url( $article['materials_single_article']['url'] ); ?>" target="<?php echo esc_attr( $article['materials_single_article']['target'] ); ?>"><?php echo esc_html( $article['materials_single_article']['title'] ); ?></a>
 															<?php
 														}
 													?>
