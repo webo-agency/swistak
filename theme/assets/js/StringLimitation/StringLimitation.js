@@ -56,7 +56,7 @@ class StringLimitation {
 
     initLimitingOnCaseStudiesSlider() {
         return this.slides.forEach(slide => {
-            this.transformContent(slide, 415);
+            this.transformContent(slide, 500);
         })
     }
 
