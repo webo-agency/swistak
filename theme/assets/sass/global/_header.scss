@@ -127,28 +127,29 @@
                 @include media-screen(desktop) {
                     margin-right: 22px;
                 }
-
-                &::after {
-                    content: '';
-                    display: block;
-                    width: 0;
-                    background: $color-primary;
-                    height: 2px;
-                    transition: width .5s ease-out;
-                    margin-top: -3px;
-                }
-
-                &:hover::after {
-                    width: 100%;
-                }
     
                 a {
+                    display: inline-block;
                     color: $color-black;
                     font-size: $size-small-2;
                     transition: color .1s ease-out;
 
                     &:hover {
                         color: $color-primary;
+                    }
+
+                    &:hover::after {
+                        width: 100%;
+                    }
+
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 0;
+                        background: $color-primary;
+                        height: 2px;
+                        transition: width .5s ease-out;
+                        margin-top: 0px;
                     }
                 }
     
