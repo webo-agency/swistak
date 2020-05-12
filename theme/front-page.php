@@ -176,7 +176,9 @@ endif;
 															<span class="ks-facility__title ks-util-weight-500 ks-case-studies-swiper-slide"></span>
 															<span class="ks-facility__title ks-facility__title--with-line"><?php echo $title; ?></span>
 														</div>
-														<div class="ks-case-studies__content"><?php echo $description; ?></div>
+														<div class="ks-case-studies__content-wrapper">
+															<div class="ks-case-studies__content"><?php echo $description; ?></div>
+														</div>
 													</div>
 												</div>
 											<?php
