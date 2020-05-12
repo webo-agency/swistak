@@ -7,8 +7,8 @@
     }
 
     &__fixed {
-        @include media-screen(tablet) {
             position: fixed!important;
+            top: 0;
             left: 0;
             right: 0;
             background: $color-gray-light-4;
@@ -16,7 +16,6 @@
             .ks-header__bar {
                 padding: 10px 0;
             }
-        }
     }
 
     &__bar {
