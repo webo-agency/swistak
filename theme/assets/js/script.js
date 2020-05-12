@@ -8,6 +8,7 @@ import FormRodo from './Form/FormRodo/FormRodo';
 import FormLabel from './Form/FormLabel/FormLabel';
 import HeaderPosition from './HeaderPosition/HeaderPosition';
 import FadeInBottom from './FadeAnimation/FadeInBottom';
+import StringLimitation from './StringLimitation/StringLimitation';
 
 const rootScript = {
     wavesStore: new WavesStore(),
@@ -16,6 +17,7 @@ const rootScript = {
     formLabel: new FormLabel(),
     header: new HeaderPosition(),
     fadeInBottom: new FadeInBottom(),
+    stringLimitation: new StringLimitation(),
     init: function() {
         caseStudiesSwiperIndexCounter.initSwiper();
         this.wavesStore.render();
@@ -24,6 +26,7 @@ const rootScript = {
         this.formLabel.eachInputInit();
         this.header.scrollPage();
         this.fadeInBottom.initFadeEffect();
+        this.stringLimitation.init();
     }
 }
 
