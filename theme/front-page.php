@@ -266,6 +266,12 @@ endif;
 				</div>
 			</section>
 
+			<section id="ks-calendy" class="ks-calendy ks-fade">
+				<div class="container">
+					<?php echo the_field('calendy_html_widget'); ?>
+				</div>
+			</section>
+
 			<section id="ks-content" class="ks-content ks-fade">
 				<div class="ks-container ks-fadeInBottom">
 					<?php echo the_field('materials_heading'); ?>
