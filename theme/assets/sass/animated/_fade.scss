@@ -2,7 +2,7 @@
     overflow: hidden;
 }
 
-.ks-fadeInBottom {
+.ks-fadeInBottom.is-running {
     opacity: 0;
     transform: translateY(100px);
     transition: opacity .5s, transform .5s ease-out;
