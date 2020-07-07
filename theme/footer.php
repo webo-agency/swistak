@@ -31,7 +31,7 @@ endif;
 			<div class="ks-container ks-fadeInBottom">
 				<div class="ks-footer__content">
 					<div>
-						<p><?php echo get_field('footer_text', 'option'); ?></p>
+						<h3><?php echo get_field('footer_text', 'option'); ?></h3>
 					</div>
 					<div>
 						<h2 class="ks-util-color-primary"><?php echo get_field('footer_heading', 'option'); ?></h2>
@@ -63,7 +63,7 @@ endif;
 							$link = get_sub_field('social_url');
 							?>	
 							<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>">
-								<img class="ks-social-img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" alt="<?php echo $image['title']; ?>" />
+								<img width="23" height="23" class="ks-social-img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" alt="<?php echo $image['title']; ?>" />
 							</a>
 							<?php
 						endwhile;
@@ -132,7 +132,7 @@ endif;
 	</footer>
 </div>
 
-<script src="https://unpkg.com/swiper@5.4.5/js/swiper.min.js"></script>
+<script src="<?php echo get_template_directory_uri() . '/assets/js/swiper.min.js' ?>"></script>
 <script src="<?php echo get_template_directory_uri() . '/assets/js/anchor-scroll-master/scroll.min.js' ?>"></script>
 <?php wp_footer(); ?>
 </body>

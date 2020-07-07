@@ -69,12 +69,18 @@ endif;
 					</div>
 				</div>
 			</section>
-
+	
 			<section id="ks-about" class="ks-background-shape ks-background-shape__square ks-about ks-fade">
 				<div class="ks-container ks-fadeInBottom">
 					<div class="ks-about__inner">
 						<div class="ks-image ks-image--big">
-							<img  src="<?php echo $about_img['url']; ?>" alt="<?php echo $about_img['alt']; ?>" alt="<?php echo $about_img['title']; ?>" />
+							<?php if($about_img): $about_img_sizes = $about_img['sizes'];?>
+								<img 
+									src="<?php echo $about_img_sizes['portrait']; ?>" 
+									width="<?php echo $about_img_sizes['portrait-width']; ?>"
+									height="<?php echo $about_img_sizes['portrait-height']; ?>" 
+									alt="<?php echo $about_img['alt']; ?>" alt="<?php echo $about_img['title']; ?>" />
+							<?php endif; ?>
 						</div>
 						<div class="ks-about__content ks-decoration ks-decoration--left">
 							<div><?php echo the_field('about_heading'); ?></div>
@@ -87,7 +93,7 @@ endif;
 										$content = get_sub_field('about_facility_info');
 										?>	
 											<div class="ks-facility">
-												<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" alt="<?php echo $image['title']; ?>" />
+												<img width="67" height="67" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" alt="<?php echo $image['title']; ?>" />
 												<span class="ks-facility__title"><?php echo $content; ?></span>
 											</div>
 										<?php
@@ -129,7 +135,7 @@ endif;
 									?>	
 										<div class="ks-facility ks-facility--extended">
 											<div>
-												<img src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>" alt="<?php echo $icon['title']; ?>" />
+												<img width="57" height="57" src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>" alt="<?php echo $icon['title']; ?>" />
 												<span class="ks-facility__title ks-facility__title--with-line"><?php echo $title; ?></span>
 											</div>
 											<?php echo $description; ?>
