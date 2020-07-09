@@ -184,16 +184,12 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 function swistak_theme_styles_and_scripts() {
 	wp_register_style('custom-styles', get_template_directory_uri().'/assets/public/dist/css/style.min.css');
 	wp_enqueue_style('custom-styles');
-	wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/public/dist/js/script.bundle.js', array (), 1.1, true);
-}
-function swistak_theme_add_async_attribute($tag, $handle) {
-	if ( 'script' !== $handle )
-	return $tag;
-	return str_replace( ' src', ' async src', $tag );
+	wp_enqueue_script( 'swiper', get_template_directory_uri() . '/assets/js/swiper.min.js', array (), 1.5, true);
+	wp_enqueue_script( 'anchor-scroll', get_template_directory_uri() . '/assets/js/anchor-scroll-master/scroll.min.js', array (), 1.5, true);
+	wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/public/dist/js/script.bundle.js', array('swiper', 'anchor-scroll'), 1.5, true);
 }
 
 add_action('wp_enqueue_scripts', 'swistak_theme_styles_and_scripts');
-add_filter('script_loader_tag', 'swistak_theme_add_async_attribute', 10, 2);
 
 if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();
