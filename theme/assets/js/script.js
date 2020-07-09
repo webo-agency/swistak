@@ -30,4 +30,6 @@ const rootScript = {
     }
 }
 
-rootScript.init();
+document.addEventListener('load', function() {
+    rootScript.init();
+})
