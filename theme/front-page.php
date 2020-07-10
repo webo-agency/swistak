@@ -94,7 +94,7 @@ endif;
 										?>	
 											<div class="ks-facility">
 												<img width="67" height="67" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" alt="<?php echo $image['title']; ?>" />
-												<span class="ks-facility__title"><?php echo $content; ?></span>
+												<h3 class="ks-facility__title"><?php echo $content; ?></h3>
 											</div>
 										<?php
 									endwhile;
