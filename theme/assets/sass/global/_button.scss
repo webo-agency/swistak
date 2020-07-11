@@ -48,7 +48,7 @@
                 color: $color-dark;
     
                 &::before {
-                    content: url('../../../images/video-icon-green.png');
+                    content: url('../images/video-icon-green.png');
                 }
             }
         }
@@ -60,7 +60,7 @@
                 color: $color-white;
     
                 &::before {
-                    content: url('../../../images/video-icon-white.png');
+                    content: url('../images/video-icon-white.png');
                 }
             }
         }
@@ -104,7 +104,7 @@
         }
 
         &::after {
-            content: url('../../../../assets/images/arrow-right-green.svg');
+            content: url('../../assets/images/arrow-right-green.svg');
             font-size: 30px;
             fill: $color-primary;
             position: absolute;
@@ -126,7 +126,7 @@
             }
             
             &::after {
-                content: url('../../../../assets/images/arrow-right-white.svg');
+                content: url('../../assets/images/arrow-right-white.svg');
             }
         }
     }

@@ -1,7 +1,7 @@
 .ks-footer {
 
     &__bg {
-        background: url('../../../images/bgfooter.png') 65% center no-repeat;
+        background: url('../images/bgfooter.png') 65% center no-repeat;
         background-size: cover;
         position: relative;
         padding: 40px 0;
@@ -24,7 +24,7 @@
 
         @include media-screen(tablet) {
             padding: 94px 0 50px;
-            background: url('../../../images/bgfooter.png') center center no-repeat;
+            background: url('../images/bgfooter.png') center center no-repeat;
             background-size: cover;
 
             &::after {

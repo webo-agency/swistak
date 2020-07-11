@@ -30,14 +30,14 @@
 
     &--phone {
         &::before {
-            content: url('../../../svg/phone-call.svg');
+            content: url('../svg/phone-call.svg');
             width: 50px;
         }
     }
 
     &--email {
         &::before {
-            content: url('../../../svg/email.svg');
+            content: url('../svg/email.svg');
             width: 50px;
         }
     }
