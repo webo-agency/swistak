@@ -51,7 +51,10 @@ endif;
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-			<section class="ks-hero">
+			<section class="ks-hero lazy" data-bg="<?php echo get_template_directory_uri() . '/assets/images/hero.jpg' ?>">
+			<div class="loading-area">
+				<div class="loader">Loading...</div>
+			</div>
 				<div class="ks-hero__container">
 					<div class="ks-container">
 						<div class="ks-hero__content">
