@@ -9,6 +9,7 @@ import FormLabel from './Form/FormLabel/FormLabel';
 import HeaderPosition from './HeaderPosition/HeaderPosition';
 import FadeInBottom from './FadeAnimation/FadeInBottom';
 import StringLimitation from './StringLimitation/StringLimitation';
+import LazyLoad from "vanilla-lazyload";
 
 const rootScript = {
     wavesStore: new WavesStore(),
@@ -18,6 +19,7 @@ const rootScript = {
     header: new HeaderPosition(),
     fadeInBottom: new FadeInBottom(),
     stringLimitation: new StringLimitation(),
+    myLazyLoad: new LazyLoad(),
     init: function() {
         caseStudiesSwiperIndexCounter.initSwiper();
         this.wavesStore.render();
@@ -27,6 +29,7 @@ const rootScript = {
         this.header.scrollPage();
         this.fadeInBottom.initFadeEffect();
         this.stringLimitation.init();
+        this.myLazyLoad.update();
     }
 }
 
