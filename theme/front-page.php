@@ -53,7 +53,7 @@ endif;
 		<main id="main" class="site-main">
 			<section class="ks-hero lazy" data-bg="<?php echo get_template_directory_uri() . '/assets/images/hero.jpg' ?>">
 			<div class="loading-area">
-				<div class="loader">Loading...</div>
+				<div class="loader">Ładowanie...</div>
 			</div>
 				<div class="ks-hero__container">
 					<div class="ks-container">
