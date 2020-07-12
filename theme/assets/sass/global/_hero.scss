@@ -27,7 +27,7 @@
     }    
 
     @include media-screen(phone-wide) {
-        min-height: 0;
+        min-height: 750px;
     }
 
     @include media-screen(tablet) {
