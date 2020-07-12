@@ -31,6 +31,13 @@
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/assets/css/swiper.min.css' ?>">
 	
 	<?php wp_head(); ?>
+	<script>
+		var acf = {};
+		acf.data = {};
+		var lazySizes = {};
+		lazySizes.cfg = {}; 
+		lazySizes.cfg.nativeLoading = {};
+		</script>
 </head>
 
 <body <?php body_class(); ?>>
