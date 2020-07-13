@@ -73,3 +73,14 @@
         }
     }
 }
+
+.no-js {
+
+    .swiper-wrapper {
+        flex-direction: column;
+    }
+
+    .swiper-slide {
+        margin-bottom: 30px;
+    }
+}
