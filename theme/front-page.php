@@ -277,7 +277,7 @@ endif;
 
 			<section id="ks-calendy" class="ks-calendy ks-fade">
 				<div class="ks-container">
-					<h2>Umów się na <br/><span class="ks-util-color-primary">konsultacje</span><div class="ks-decoration__wave ks-decoration__wave--small"><div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div><div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div><div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div><div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div><div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div><div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(45deg);"></div><div class="ks-decoration__line ks-decoration__line--small" style="transform: rotate(-45deg);"></div></div></h2>
+					<h2>Umów się na <br/><span class="ks-util-color-primary">konsultacje</span></h2>
 					<div class="container">
 						<?php echo the_field('calendy_html_widget'); ?>
 					</div>
