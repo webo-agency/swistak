@@ -179,7 +179,7 @@ endif;
 											$title = get_sub_field('case_study_title');
 											$description = get_sub_field('case_study_description');
 											?>	
-												<div class="swiper-slide">
+												<li class="swiper-slide">
 													<div class="ks-case-studies__slide">
 														<div class="ks-facility">
 															<span class="ks-facility__title ks-util-weight-500 ks-case-studies-swiper-slide"></span>
@@ -189,7 +189,7 @@ endif;
 															<div class="ks-case-studies__content"><?php echo $description; ?></div>
 														</div>
 													</div>
-												</div>
+												</li>
 											<?php
 										endwhile;
 									else :
@@ -218,7 +218,7 @@ endif;
 											$author_name = get_sub_field('recommendation_author_name');
 											$description = get_sub_field('recommendation_description');
 											?>	
-												<div class="swiper-slide">	
+												<li class="swiper-slide">	
 													<div class="ks-recommendation">
 														<div class="ks-image ks-image--small">
 															<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" alt="<?php echo $image['title']; ?>" />
@@ -231,7 +231,7 @@ endif;
 															<?php echo $description; ?>
 														</div>
 													</div>
-												</div>
+												</li>
 											<?php
 										endwhile;
 									else :
@@ -309,7 +309,7 @@ endif;
 									$materials_chunks = array_chunk($materials_articles, $slide_size, true);
 									foreach ($materials_chunks as $key => $chunk) {
 										?>
-											<div class="swiper-slide">
+											<li class="swiper-slide">
 												<div class="ks-content__links">	
 													<?php
 														foreach ($chunk as $key => $article) {
@@ -319,7 +319,7 @@ endif;
 														}
 													?>
 												</div>
-											</div>
+											</li>
 										<?php
 									}
 									?>
