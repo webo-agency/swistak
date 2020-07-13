@@ -71,7 +71,7 @@ endif;
 					endif;
 				?>
 				</div>
-				<div>
+				<div class="ks-copyright__author">
 					<a 
 						id="webo" 
 						href="https://www.webo.pl" 
