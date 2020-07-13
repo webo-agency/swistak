@@ -5,10 +5,10 @@
   "main": "gulpfile.js",
   "scripts": {
     "dev-server": "webpack-dev-server --mode development",
-    "webpack-build": "webpack --mode production",
+    "webpack-build": "webpack",
     "gulp-build": "gulp sass",
     "build": "concurrently --kill-others \"npm run webpack-build\" \"npm run gulp-build\"",
-    "generate": "npm run webpack-build"
+    "generate": "webpack --mode production"
   },
   "dependencies": {
     "@babel/cli": "^7.4.4",

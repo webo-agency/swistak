@@ -10,9 +10,7 @@ class WavesStore {
             { id: 1, elements: document.getElementsByTagName('h2'), waveType: this.smallWave },
             { id: 2, elements: document.getElementsByClassName('ks-decoration'), waveType: this.bigWave },
         ];
-    }
-    
-    render() {
+
         return this.tags.map(types => {
             const wave = new WaveGenerator(types.waveType, types.elements);
             return wave.generatorinit();
