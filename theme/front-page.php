@@ -186,7 +186,7 @@ get_header();
 					<?php echo the_field('case_studies_heading'); ?>
 					<div class="ks-swiper ks-swiper--shadow">
 						<div class="swiper-container ks-swiper__case-studies">
-							<div class="swiper-wrapper">
+							<ul class="swiper-wrapper">
 								<?php
 									if( have_rows('case_studies_cases') ):
 										while ( have_rows('case_studies_cases') ) : the_row();
@@ -209,7 +209,7 @@ get_header();
 									else :
 									endif;
 								?>
-							</div>
+							</ul>
 							<div class="swiper-button-next"></div>
 							<div class="swiper-button-prev"></div>
 						</div>
@@ -223,7 +223,7 @@ get_header();
 					<?php echo the_field('recommendations_heading'); ?>
 					<div class="ks-swiper">
 						<div class="ks-recommendations__swiper-container">
-							<div class="swiper-wrapper">
+							<ul class="swiper-wrapper">
 								<?php
 									if( have_rows('recommendations_items') ):
 										while ( have_rows('recommendations_items') ) : the_row();
@@ -251,7 +251,7 @@ get_header();
 									else :
 									endif;
 								?>
-							</div>
+							</ul>
 						</div>
 					<div class="swiper-pagination ks-recommendations__swiper-pagination"></div>
 					</div>
@@ -315,7 +315,7 @@ get_header();
 						</div>
 						<div class="ks-content__column">
 							<div class="ks-content__swiper-container">
-								<div class="swiper-wrapper">
+								<ul class="swiper-wrapper">
 									<?php
 									$materials_articles = get_field('materials_articles');
 									$materials_articles_count = count($materials_articles);
@@ -337,7 +337,7 @@ get_header();
 										<?php
 									}
 									?>
-								</div>
+								</ul>
 								<div class="ks-content__swiper-pagination"></div>
 							</div>
 						</div>
