@@ -6,47 +6,7 @@
  */
 
 get_header();
-$hero_button_1 = get_field('hero_button_1');
-if( $hero_button_1 ): 
-    $hero_button_1_url = $hero_button_1['url'];
-    $hero_button_1_title = $hero_button_1['title'];
-    $hero_button_1_target = $hero_button_1['target'] ? $hero_button_1['target'] : '_self';
-endif;
 
-$hero_button_2 = get_field('hero_button_2');
-if( $hero_button_2 ): 
-    $hero_button_2_url = $hero_button_2['url'];
-    $hero_button_2_title = $hero_button_2['title'];
-    $hero_button_2_target = $hero_button_2['target'] ? $hero_button_2['target'] : '_self';
-endif;
-
-$about_img = get_field('about_image');
-if( $about_img ): 
-    $about_img_url = $about_img['url'];
-    $about_img_alt = $about_img['alt'];
-    $about_img_title = $about_img['title'];
-endif;
-
-$help_img_1 = get_field('help_image_1');
-if( $help_img_1 ): 
-    $help_img_1_url = $help_img_1['url'];
-    $help_img_1_alt = $help_img_1['alt'];
-    $help_img_1_title = $help_img_1['title'];
-endif;
-
-$help_img_2 = get_field('help_image_2');
-if( $help_img_2 ): 
-    $help_img_2_url = $help_img_2['url'];
-    $help_img_2_alt = $help_img_2['alt'];
-    $help_img_2_title = $help_img_2['title'];
-endif;
-
-$strategy_image = get_field('strategy_image');
-if( $strategy_image ): 
-    $strategy_image_url = $strategy_image['url'];
-    $strategy_image_alt = $strategy_image['alt'];
-    $strategy_image_title = $strategy_image['title'];
-endif;
 ?>
 
 	<div id="primary" class="content-area">
@@ -61,6 +21,24 @@ endif;
 							<?php echo the_field('hero_title'); ?>
 							<p><?php echo the_field('hero_description'); ?></p>
 							<div class="ks-hero__buttons">
+								<?php
+								
+									$hero_button_1 = get_field('hero_button_1');
+									if( $hero_button_1 ): 
+										$hero_button_1_url = $hero_button_1['url'];
+										$hero_button_1_title = $hero_button_1['title'];
+										$hero_button_1_target = $hero_button_1['target'] ? $hero_button_1['target'] : '_self';
+									endif;
+
+									$hero_button_2 = get_field('hero_button_2');
+									if( $hero_button_2 ): 
+										$hero_button_2_url = $hero_button_2['url'];
+										$hero_button_2_title = $hero_button_2['title'];
+										$hero_button_2_target = $hero_button_2['target'] ? $hero_button_2['target'] : '_self';
+									endif;
+
+								?>
+
 								<button class="ks-button ks-button--primary">
 									<a class="scroll" href="<?php echo esc_url( $hero_button_1_url ); ?>" target="<?php echo esc_attr( $hero_button_1_target ); ?>"><?php echo esc_html( $hero_button_1_title ); ?></a>
 								</button>
@@ -77,7 +55,16 @@ endif;
 				<div class="ks-container ks-fadeInBottom">
 					<div class="ks-about__inner">
 						<div class="ks-image ks-image--big">
-							<?php if($about_img): $about_img_sizes = $about_img['sizes'];?>
+							<?php
+							
+								$about_img = get_field('about_image');
+								if( $about_img ): 
+									$about_img_url = $about_img['url'];
+									$about_img_alt = $about_img['alt'];
+									$about_img_title = $about_img['title'];
+								endif;
+
+								if($about_img): $about_img_sizes = $about_img['sizes'];?>
 								<img 
 									src="<?php echo $about_img_sizes['portrait']; ?>" 
 									width="<?php echo $about_img_sizes['portrait-width']; ?>"
@@ -120,6 +107,23 @@ endif;
 							<?php echo the_field('help_content'); ?>
 						</div>
 						<div class="ks-help__images">
+							<?php
+								 
+								$help_img_1 = get_field('help_image_1');
+								if( $help_img_1 ): 
+									$help_img_1_url = $help_img_1['url'];
+									$help_img_1_alt = $help_img_1['alt'];
+									$help_img_1_title = $help_img_1['title'];
+								endif;
+
+								$help_img_2 = get_field('help_image_2');
+								if( $help_img_2 ): 
+									$help_img_2_url = $help_img_2['url'];
+									$help_img_2_alt = $help_img_2['alt'];
+									$help_img_2_title = $help_img_2['title'];
+								endif;
+
+							?>
 							<div class="ks-image ks-image--normal">
 								<img src="<?php echo $help_img_1['url']; ?>" alt="<?php echo $help_img_1['alt']; ?>" alt="<?php echo $help_img_1['title']; ?>" />
 							</div>
@@ -160,6 +164,16 @@ endif;
 							<p class="ks-facility__title"><?php echo the_field('strategy_heading_2'); ?></p>
 							<?php echo the_field('strategy_content'); ?>
 						</div>
+						<?php
+							
+							$strategy_image = get_field('strategy_image');
+							if( $strategy_image ): 
+								$strategy_image_url = $strategy_image['url'];
+								$strategy_image_alt = $strategy_image['alt'];
+								$strategy_image_title = $strategy_image['title'];
+							endif;
+							
+						?>
 						<div class="ks-strategy__column ks-strategy__column--image">
 							<img src="<?php echo $strategy_image['url']; ?>" alt="<?php echo $strategy_image['alt']; ?>" alt="<?php echo $strategy_image['title']; ?>" />
 						</div>
