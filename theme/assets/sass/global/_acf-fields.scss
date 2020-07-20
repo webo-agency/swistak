@@ -5,10 +5,6 @@
         border-top: none!important;
         padding: 0!important;
         
-        &:first-child {
-            margin-right: 16px;
-        }
-
         &:focus-within,
         &.active {
 
@@ -28,10 +24,6 @@
         display: inline-block;
         width: 100%;
         margin-bottom: 38px!important;
-
-        @include media-screen(tablet) {
-            width: calc(50% - 10px);
-        }
     }
 
     .acf-field-textarea {
