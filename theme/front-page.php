@@ -122,14 +122,29 @@ get_header();
 									$help_img_2_alt = $help_img_2['alt'];
 									$help_img_2_title = $help_img_2['title'];
 								endif;
-
 							?>
-							<div class="ks-image ks-image--normal">
-								<img src="<?php echo $help_img_1['url']; ?>" alt="<?php echo $help_img_1['alt']; ?>" alt="<?php echo $help_img_1['title']; ?>" />
-							</div>
-							<div class="ks-image ks-image--normal">
-								<img src="<?php echo $help_img_2['url']; ?>" alt="<?php echo $help_img_2['alt']; ?>" alt="<?php echo $help_img_2['title']; ?>" />
-							</div>
+
+							<?php if($help_img_1): $help_img_1_sizes = $help_img_1['sizes'];?>
+								<div class="ks-image ks-image--normal">
+									<img src="<?php echo $help_img_1_sizes['help1']; ?>"
+										alt="<?php echo $help_img_1['alt']; ?>"
+										title="<?php echo $help_img_1['title']; ?>"
+										width="<?php echo $help_img_1_sizes['help1-width']; ?>"
+										height="<?php echo $help_img_1_sizes['help1-height']; ?>" 
+									/>
+								</div>
+							<?php endif; ?>
+
+							<?php if($help_img_2): $help_img_2_sizes = $help_img_2['sizes'];?>
+								<div class="ks-image ks-image--normal">
+									<img src="<?php echo $help_img_2_sizes['help2']; ?>"
+										alt="<?php echo $help_img_2['alt']; ?>"
+										title="<?php echo $help_img_2['title']; ?>"
+										width="<?php echo $help_img_2_sizes['help2-width']; ?>"
+										height="<?php echo $help_img_2_sizes['help2-height']; ?>" 
+									/>
+								</div>
+							<?php endif; ?>
 						</div>
 					</div>
 					<div class="ks-help__facilities ks-decoration ks-decoration--center">
@@ -231,12 +246,21 @@ get_header();
 											$author_role = get_sub_field('recommendation_author_role');
 											$author_name = get_sub_field('recommendation_author_name');
 											$description = get_sub_field('recommendation_description');
+											
 											?>	
 												<li class="swiper-slide">	
 													<div class="ks-recommendation">
-														<div class="ks-image ks-image--small">
-															<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" alt="<?php echo $image['title']; ?>" />
-														</div>
+														<?php if($image): $image_sizes = $image['sizes'];?>
+															<div class="ks-image ks-image--small">
+																<img
+																	src="<?php echo $image_sizes['recommendation']; ?>"
+																	alt="<?php echo $image['alt']; ?>"
+																	title="<?php echo $image['title']; ?>"
+																	width="<?php echo $image_sizes['recommendation-width']; ?>"
+																	height="<?php echo $image_sizes['recommendation-height']; ?>" 
+																/>
+															</div>
+														<?php endif; ?>
 														<div class="ks-recommendation__content">
 															<div class="ks-facility">
 																<span class="ks-facility__title ks-facility__title--thin ks-facility__title--small"><?php echo $author_role; ?></span>
@@ -275,7 +299,11 @@ get_header();
 													<div class="ks-clients__logotype">
 														<div class="ks-clients-logotype-img">
 															<a href="<?php echo $brand['client_url']['url']; ?>" target="<?php echo $brand['client_url']['target']; ?>">
-																<img src="<?php echo $brand['clients_brand_logotype']['url']; ?>" alt="<?php echo $brand['clients_brand_logotype']['alt']; ?>" />
+																<img
+																	src="<?php echo $brand['clients_brand_logotype']['url']; ?>"
+																	alt="<?php echo $brand['clients_brand_logotype']['alt']; ?>"
+																	title="<?php echo $brand['clients_brand_logotype']['title']; ?>"
+																/>
 															</a>
 														</div>
 													</div>

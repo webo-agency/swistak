@@ -46,6 +46,10 @@ if ( ! function_exists( 'swistak_theme_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
+		add_image_size( 'portrait', 325, 488, true );
+		add_image_size( 'help1', 260, 356, true );
+		add_image_size( 'help2', 260, 316, true );
+		add_image_size( 'recommendation', 130, 130 );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
