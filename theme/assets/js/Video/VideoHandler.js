@@ -1,47 +1,45 @@
 class Video {
-    constructor() {
-        this.activeClassName = 'active';
-        this.popupClassName = 'ks-popup';
-        this.buttons = document.querySelectorAll('.ks-button__video a');
-        this.videoId = document.getElementById('ks-video-popup');
-        this.allOverlays = document.querySelectorAll('.ks-popup .ks-overlay');
-        this.videoIframe = false;
-        this.videoSource = false;
-        this.isVideoRunning = false;
-    }
+    static activeClassName = 'active';
+    static popupClassName = 'ks-popup';
+    static buttons = document.querySelectorAll('.ks-button__video a');
+    static videoId = document.getElementById('ks-video-popup');
+    static allOverlays = document.querySelectorAll('.ks-popup .ks-overlay');
+    static videoIframe = false;
+    static videoSource = false;
+    static isVideoRunning = false;
 
-    renderVideoSrc() {
-      return this.isVideoRunning ? this.videoIframe.src = this.videoSource : this.videoIframe.src = '';
+    static renderVideoSrc() {
+      return Video.isVideoRunning ? Video.videoIframe.src = Video.videoSource : Video.videoIframe.src = '';
     }
     
-    toggleVideo() {
-        this.buttons.forEach(button => {
+    static toggleVideo() {
+      Video.buttons.forEach(button => {
             button.addEventListener('click', (e) => {
                 e.preventDefault();
-                this.videoId.classList.toggle(this.activeClassName);
-                this.isVideoRunning = !this.isVideoRunning;
-                this.renderVideoSrc();
+                Video.videoId.classList.toggle(Video.activeClassName);
+                Video.isVideoRunning = !Video.isVideoRunning;
+                Video.renderVideoSrc();
             })
         })
     };
 
-    hideOnOverlayClick() {
-        this.allOverlays.forEach(overlay => {
+    static hideOnOverlayClick() {
+      Video.allOverlays.forEach(overlay => {
             overlay.addEventListener('click', () => {
-                overlay.closest(`.${this.popupClassName}`).classList.remove(this.activeClassName);
-                this.isVideoRunning = false;
-                this.renderVideoSrc();
+                overlay.closest(`.${Video.popupClassName}`).classList.remove(Video.activeClassName);
+                Video.isVideoRunning = false;
+                Video.renderVideoSrc();
             })
         })
     };
 
-    init() {
-      this.videoIframe = document.querySelector('#ks-video-popup iframe');
-      if(this.videoIframe != null) {
-        this.videoSource = `${this.videoIframe.src}&amp;autoplay=1`;
-        this.toggleVideo();
-        this.hideOnOverlayClick();
-        this.renderVideoSrc();
+    static initVideo() {
+      Video.videoIframe = document.querySelector('#ks-video-popup iframe');
+      if(Video.videoIframe != null) {
+        Video.videoSource = `${Video.videoIframe.src}&amp;autoplay=1`;
+        Video.toggleVideo();
+        Video.hideOnOverlayClick();
+        Video.renderVideoSrc();
       }
       else {
         return;
@@ -49,4 +47,6 @@ class Video {
     }
 }
 
-export default Video;
+document.addEventListener('DOMContentLoaded', function() {
+  Video.initVideo();
+})

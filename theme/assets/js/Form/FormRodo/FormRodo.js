@@ -1,20 +1,21 @@
 class FormRodo {
-    constructor() {
-        this.checkbox = document.querySelector('#form-rodo-checkbox input[type="checkbox"]');
-        this.formBtn = document.querySelector('#contact-form-submit');
-        this.checkbox.checked = false;
-    }
-
-    toggleActiveSubmitButton() {
-        this.checkbox.addEventListener('click', () => {
-            this.formBtn.toggleAttribute('disabled');
+    
+    static checkbox = document.querySelector('#form-rodo-checkbox input[type="checkbox"]');
+    static formBtn = document.querySelector('#contact-form-submit');
+        
+    static toggleActiveSubmitButton() {
+        FormRodo.checkbox.addEventListener('click', () => {
+            FormRodo.formBtn.toggleAttribute('disabled');
         })
     }
 
-    init() {
-        this.formBtn.setAttribute('disabled', 'true');
-        this.toggleActiveSubmitButton();
+    static initForm() {
+        FormRodo.formBtn.setAttribute('disabled', 'true');
+        FormRodo.toggleActiveSubmitButton();
     }
 }
 
-export default FormRodo;
+document.addEventListener('DOMContentLoaded', function() {
+    FormRodo.checkbox.checked = false;
+    FormRodo.initForm();
+})

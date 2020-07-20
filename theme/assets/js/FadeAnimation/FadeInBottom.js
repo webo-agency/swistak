@@ -1,14 +1,16 @@
 class FadeInBottom {
-    constructor() {
-        this.sections = document.querySelectorAll('.ks-fade');
-        this.sections.forEach(section => {
+    
+    static sections = document.querySelectorAll('.ks-fade');
+
+    static loopSections() {
+        FadeInBottom.sections.forEach(section => {
             section.classList.add('is-running');
         });
     }
 
-    initFadeEffect() {
+    static initFadeEffect() {
 
-        this.sections.forEach(section => {
+        FadeInBottom.sections.forEach(section => {
             const fadingElement = section.querySelector(".ks-fadeInBottom");
             window.addEventListener("scroll", () => {
                 if(fadingElement !== null){
@@ -21,4 +23,7 @@ class FadeInBottom {
     }
 }
 
-export default FadeInBottom;
+document.addEventListener('DOMContentLoaded', function() {
+    console.log(FadeInBottom)
+    FadeInBottom.initFadeEffect();
+})

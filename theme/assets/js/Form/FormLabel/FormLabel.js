@@ -1,28 +1,29 @@
 class FormLabel {
-    constructor() {
-        this.inputs = document.querySelectorAll('.ks-input');
-        this.activeClassName = 'active';
-        this.acfFieldClassName = '.acf-field';
-    }
+    
+    static inputs = document.querySelectorAll('.ks-input');
+    static activeClassName = 'active';
+    static acfFieldClassName = '.acf-field';
 
-    toggleLabelClassNameIfEmpty(input, value) {
-        const parentField = input.closest(this.acfFieldClassName);
+    static toggleLabelClassNameIfEmpty(input, value) {
+        const parentField = input.closest(FormLabel.acfFieldClassName);
         if(!value) {
-            parentField.classList.remove(this.activeClassName);
+            parentField.classList.remove(FormLabel.activeClassName);
         }
         else {
-            parentField.classList.add(this.activeClassName);
+            parentField.classList.add(FormLabel.activeClassName);
         }
     }
 
-    eachInputInit() {
-        this.inputs.forEach(input => {
-            this.toggleLabelClassNameIfEmpty(input, input.value)
+    static eachInputInit() {
+        FormLabel.inputs.forEach(input => {
+            FormLabel.toggleLabelClassNameIfEmpty(input, input.value)
             input.addEventListener('change', (e) => {
-                this.toggleLabelClassNameIfEmpty(input, e.target.value)
+                FormLabel.toggleLabelClassNameIfEmpty(input, e.target.value)
             })
         })
     }
 }
 
-export default FormLabel;
+document.addEventListener('DOMContentLoaded', function() {
+    FormLabel.eachInputInit();
+})

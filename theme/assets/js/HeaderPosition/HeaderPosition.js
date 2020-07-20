@@ -1,34 +1,38 @@
 class HeaderPosition {
-    constructor() {
-        this.header = document.querySelector('.ks-header');
-        this.fixedClassname = 'ks-header__fixed';
-        this.lastScrollTop = 0;
+
+    static header = document.querySelector('#header');
+    static fixedClassname = 'ks-header__fixed';
+    static lastScrollTop = 0;
+    
+
+    static showHeader() {
+        HeaderPosition.header.classList.add(HeaderPosition.fixedClassname)
     }
 
-    showHeader() {
-        this.header.classList.add(this.fixedClassname)
+    static hideHeader() {
+        HeaderPosition.header.classList.remove(HeaderPosition.fixedClassname)
     }
 
-    hideHeader() {
-        this.header.classList.remove(this.fixedClassname)
-    }
-
-    scrollPage() {
+    static scrollPage() {
         window.addEventListener("scroll", () => {
+            console.log('aaasd')
             const st = window.pageYOffset || document.documentElement.scrollTop;
-            if(window.scrollY > this.header.clientHeight) {
-                if (st > this.lastScrollTop){
-                    this.hideHeader();
+            if(window.scrollY > HeaderPosition.header.clientHeight) {
+                if (st > HeaderPosition.lastScrollTop){
+                    HeaderPosition.hideHeader();
                 } else {
-                    this.showHeader();
+                    HeaderPosition.showHeader();
                 }
-                this.lastScrollTop = st <= 0 ? 0 : st;
+                HeaderPosition.lastScrollTop = st <= 0 ? 0 : st;
             }
             else {
-                this.hideHeader();
+                HeaderPosition.hideHeader();
             }
         }, false);
     }
 }
 
-export default HeaderPosition;
+document.addEventListener('DOMContentLoaded', function() {
+    console.log(HeaderPosition)
+    HeaderPosition.scrollPage();
+})

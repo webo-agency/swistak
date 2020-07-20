@@ -1,10 +1,9 @@
 class StringLimitation {
-    constructor() {
-        this.slides = document.querySelectorAll('.ks-swiper__case-studies .swiper-slide .ks-case-studies__content');
-        this.slidesContainer = document.querySelectorAll('.ks-swiper__case-studies .swiper-slide');
-    }
+        
+    static slides = document.querySelectorAll('.ks-swiper__case-studies .swiper-slide .ks-case-studies__content');
+    static slidesContainer = document.querySelectorAll('.ks-swiper__case-studies .swiper-slide');
 
-    createMoreButton(callback) {
+    static createMoreButton(callback) {
         const readmore = 'Czytaj więcej';
         const readless = 'Zwiń';
         const button = document.createElement('button');
@@ -26,43 +25,41 @@ class StringLimitation {
         return button;
     }
 
-    transformContent(container, charactersLimit) {
+    static transformContent(container, charactersLimit) {
 
-            let entryContent;
-            let transformedContent;
-            let isContainerExpanded = false;
+        let entryContent;
+        let transformedContent;
+        let isContainerExpanded = false;
 
-            const toggleContent = (content, newContent) => {
-                isContainerExpanded = !isContainerExpanded;
-                container.innerText = isContainerExpanded ? content : newContent;
-            }
+        const triggerToggle = () => {
+            return toggleContent(entryContent, `${transformedContent} . . .`);
+        }
 
-            const triggerToggle = () => {
-                return toggleContent(entryContent, `${transformedContent} . . .`);
-            }
-            
-            let containerContent = container.innerText;
-            const containerCharactersNumber = container.innerText.length;
-            const maxAcceptableCharactersNumber = charactersLimit;
+        const toggleContent = (content, newContent) => {
+            isContainerExpanded = !isContainerExpanded;
+            container.innerText = isContainerExpanded ? content : newContent;
+        }
+        
+        let containerContent = container.innerText;
+        const containerCharactersNumber = container.innerText.length;
+        const maxAcceptableCharactersNumber = charactersLimit;
 
-            if(containerCharactersNumber > maxAcceptableCharactersNumber) {
-                entryContent = containerContent;
-                transformedContent = entryContent.substring(0, maxAcceptableCharactersNumber).trim();
-                container.innerText = isContainerExpanded ? entryContent : `${transformedContent} . . .`;
-                container.parentElement.appendChild(this.createMoreButton(triggerToggle));
-            }
-            return container.innerText;
+        if(containerCharactersNumber > maxAcceptableCharactersNumber) {
+            entryContent = containerContent;
+            transformedContent = entryContent.substring(0, maxAcceptableCharactersNumber).trim();
+            container.innerText = isContainerExpanded ? entryContent : `${transformedContent} . . .`;
+            container.parentElement.appendChild(StringLimitation.createMoreButton(triggerToggle));
+        }
+        return container.innerText;
     }
 
-    initLimitingOnCaseStudiesSlider() {
-        return this.slides.forEach(slide => {
-            this.transformContent(slide, 500);
+    static initLimitingOnCaseStudiesSlider() {
+        return StringLimitation.slides.forEach(slide => {
+            StringLimitation.transformContent(slide, 500);
         })
-    }
-
-    init() {
-        this.initLimitingOnCaseStudiesSlider();
     }
 }
 
-export default StringLimitation;
+document.addEventListener('DOMContentLoaded', function() {
+    StringLimitation.initLimitingOnCaseStudiesSlider();
+})
