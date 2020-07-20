@@ -1,6 +1,6 @@
 class HeaderPosition {
 
-    static header = document.querySelector('#header');
+    static header = document.querySelector('[data-header]');
     static fixedClassname = 'ks-header__fixed';
     static lastScrollTop = 0;
     

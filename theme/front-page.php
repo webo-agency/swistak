@@ -43,7 +43,7 @@ get_header();
 									<a class="scroll" href="<?php echo esc_url( $hero_button_1_url ); ?>" target="<?php echo esc_attr( $hero_button_1_target ); ?>"><?php echo esc_html( $hero_button_1_title ); ?></a>
 								</button>
 								<button class="ks-button ks-button__video ks-button__video--primary">
-									<a href="<?php echo esc_url( $hero_button_2_url ); ?>" target="<?php echo esc_attr( $hero_button_2_target ); ?>"><?php echo esc_html( $hero_button_2_title ); ?></a>
+									<a href="<?php echo esc_url( $hero_button_2_url ); ?>" target="<?php echo esc_attr( $hero_button_2_target ); ?>" data-video-trigger><?php echo esc_html( $hero_button_2_title ); ?></a>
 								</button>
 							</div>
 						</div>
@@ -193,14 +193,14 @@ get_header();
 											$title = get_sub_field('case_study_title');
 											$description = get_sub_field('case_study_description');
 											?>	
-												<li class="swiper-slide">
+												<li class="swiper-slide" data-case-slide>
 													<div class="ks-case-studies__slide">
 														<div class="ks-facility">
 															<span class="ks-facility__title ks-util-weight-500 ks-case-studies-swiper-slide"></span>
 															<span class="ks-facility__title ks-facility__title--with-line"><?php echo $title; ?></span>
 														</div>
 														<div class="ks-case-studies__content-wrapper">
-															<div class="ks-case-studies__content"><?php echo $description; ?></div>
+															<div class="ks-case-studies__content" data-case-studies-content><?php echo $description; ?></div>
 														</div>
 													</div>
 												</li>
@@ -309,7 +309,7 @@ get_header();
 								<div class="ks-overlay"></div>
 								
 								<button class="ks-button ks-button__video ks-button__video--white">
-									<a href="<?php echo esc_url( $hero_button_2_url ); ?>" target="<?php echo esc_attr( $hero_button_2_target ); ?>"><?php echo esc_html( $hero_button_2_title ); ?></a>
+									<a href="<?php echo esc_url( $hero_button_2_url ); ?>" target="<?php echo esc_attr( $hero_button_2_target ); ?>" data-video-trigger><?php echo esc_html( $hero_button_2_title ); ?></a>
 								</button>
 							</div>
 						</div>

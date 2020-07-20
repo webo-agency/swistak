@@ -1,7 +1,7 @@
 class Video {
     static activeClassName = 'active';
     static popupClassName = 'ks-popup';
-    static buttons = document.querySelectorAll('.ks-button__video a');
+    static buttons = document.querySelectorAll('[data-video-trigger]');
     static videoId = document.getElementById('ks-video-popup');
     static allOverlays = document.querySelectorAll('.ks-popup .ks-overlay');
     static videoIframe = false;

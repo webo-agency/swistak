@@ -1,7 +1,7 @@
 class StringLimitation {
         
-    static slides = document.querySelectorAll('.ks-swiper__case-studies .swiper-slide .ks-case-studies__content');
-    static slidesContainer = document.querySelectorAll('.ks-swiper__case-studies .swiper-slide');
+    static slides = document.querySelectorAll('[data-case-studies-content]');
+    static slidesContainer = document.querySelectorAll('[data-case-slide]');
 
     static createMoreButton(callback) {
         const readmore = 'Czytaj więcej';
