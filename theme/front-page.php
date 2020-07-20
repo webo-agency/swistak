@@ -185,7 +185,7 @@ get_header();
 				<div class="ks-container ks-fadeInBottom">
 					<?php echo the_field('case_studies_heading'); ?>
 					<div class="ks-swiper ks-swiper--shadow">
-						<div class="swiper-container ks-swiper__case-studies">
+						<div class="swiper-container ks-swiper__case-studies" data-slider-case-studies>
 							<ul class="swiper-wrapper">
 								<?php
 									if( have_rows('case_studies_cases') ):
@@ -222,7 +222,7 @@ get_header();
 				<div class="ks-container ks-fadeInBottom">
 					<?php echo the_field('recommendations_heading'); ?>
 					<div class="ks-swiper">
-						<div class="ks-recommendations__swiper-container">
+						<div class="swiper-container ks-recommendations__swiper-container" data-slider-recommendation >
 							<ul class="swiper-wrapper">
 								<?php
 									if( have_rows('recommendations_items') ):
@@ -314,7 +314,7 @@ get_header();
 							</div>
 						</div>
 						<div class="ks-content__column">
-							<div class="ks-content__swiper-container">
+							<div class="ks-content__swiper-container" data-slider-materials>
 								<ul class="swiper-wrapper">
 									<?php
 									$materials_articles = get_field('materials_articles');
