@@ -43,7 +43,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="<?php echo getPageClassName(); ?> site">
-	<div class="ks-header">
+	<div class="ks-header" id="header">
 		<header id="masthead" class="ks-container site-header">
 			<div class="ks-header__bar">
 				<div class="site-branding">
