@@ -3,11 +3,19 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const jsConfig = {
     entry: {
-        main: ['./assets/js/script.js'],
+        Main: ['./assets/js/script.js'],
+        FadeInBottom: ['./assets/js/FadeAnimation/FadeInBottom.js'],
+        FormLabel: ['./assets/js/Form/FormLabel/FormLabel.js'],
+        FormRodo: ['./assets/js/Form/FormRodo/FormRodo.js'],
+        HeaderPosition: ['./assets/js/HeaderPosition/HeaderPosition.js'],
+        StringLimitation: ['./assets/js/StringLimitation/StringLimitation.js'],
+        SwiperCarousels: ['./assets/js/SwiperCarousels/SwiperCarousels.js'],
+        VideoHandler: ['./assets/js/Video/VideoHandler.js'],
+        WaveStore: ['./assets/js/WaveDecoration/WaveStore/WaveStore.js'],
     },
     output: {
         path: path.resolve(__dirname, 'assets/public/dist/js'),
-        filename: 'script.bundle.js'
+        filename: '[name].js'
     },
     module: {
         rules: [
@@ -18,7 +26,7 @@ const jsConfig = {
                     loader: 'babel-loader',
                     options: {
                         presets: ['@babel/preset-env'],
-                        plugins: ['@babel/transform-runtime']
+                        plugins: ['@babel/transform-runtime', "@babel/plugin-proposal-class-properties"]
                     }
                 }
             },
