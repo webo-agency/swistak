@@ -15,7 +15,6 @@ class HeaderPosition {
 
     static scrollPage() {
         window.addEventListener("scroll", () => {
-            console.log('aaasd')
             const st = window.pageYOffset || document.documentElement.scrollTop;
             if(window.scrollY > HeaderPosition.header.clientHeight) {
                 if (st > HeaderPosition.lastScrollTop){
