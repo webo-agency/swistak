@@ -375,7 +375,7 @@ get_header();
 			
 			<div id="ks-video-popup" class="ks-popup">
 				<div class="ks-popup__content">
-					<?php echo the_field('main_page_video'); ?>
+					<?php echo str_replace('src', "data-lazy-src", get_field('main_page_video')); ?>
 				</div>
 				<div class="ks-overlay"></div>
 			</div>

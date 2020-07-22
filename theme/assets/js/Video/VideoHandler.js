@@ -36,7 +36,7 @@ class Video {
     static initVideo() {
       Video.videoIframe = document.querySelector('#ks-video-popup iframe');
       if(Video.videoIframe != null) {
-        Video.videoSource = `${Video.videoIframe.src}&amp;autoplay=1`;
+        Video.videoSource = `${Video.dataset['data-lazy-src']}&amp;autoplay=1`;
         Video.toggleVideo();
         Video.hideOnOverlayClick();
         Video.renderVideoSrc();
