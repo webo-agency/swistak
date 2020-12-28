@@ -47,6 +47,11 @@ endif;
 							acfe_form('footer-contact-form'); 
 						?>
 					</div>
+					<?php if( get_field('hero_button_1') ): ?>
+						<button class="ks-button ks-button--primary">
+							<a class="scroll" href="<?php echo get_field('hero_button_1')['url']; ?>" target="_self"  title="<?php echo get_field('hero_button_1')['title']; ?>"><?php echo get_field('hero_button_1')['title']; ?></a>
+						</button>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>

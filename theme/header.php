@@ -83,9 +83,14 @@
 							endif;
 						?>
 						</div>
-						<button class="ks-button ks-button--primary">
+						<button class="ks-button ks-button--primary inverted">
 							<a class="scroll" href="#kontakt">Skontaktuj się</a>
 						</button>
+						<style>.ks-button--primary.inverted{color: #00b3a7;background: transparent;border: 2px solid #00b3a7;}
+							   .ks-button--primary.inverted a{color: #00b3a7; transition: all 0.3}
+.ks-button--primary.inverted:hover{background: #00b3a7;color: #fff}
+.ks-button--primary.inverted:hover a{color: #fff}
+</style>
 					</div>
 				</div>
 				</nav><!-- #site-navigation -->
