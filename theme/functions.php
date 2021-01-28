@@ -215,9 +215,10 @@ function add_menu_items_classname( $atts, $item, $args ) {
 add_filter( 'nav_menu_link_attributes', 'add_menu_items_classname', 10, 3 );
 
 
+
 function allow_nbsp_in_tinymce( $mceInit ) {
-	$mceInit['entities'] = '160,nbsp,38,amp,60,lt,62,gt';   
-	$mceInit['entity_encoding'] = 'named';
-	return $mceInit;
+    $mceInit['entities'] = '160,nbsp,38,amp,60,lt,62,gt';   
+    $mceInit['entity_encoding'] = 'named';
+    return $mceInit;
 }
 add_filter( 'tiny_mce_before_init', 'allow_nbsp_in_tinymce' );

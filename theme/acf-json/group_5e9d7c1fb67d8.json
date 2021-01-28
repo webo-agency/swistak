@@ -77,6 +77,21 @@
             "hide_admin": 0,
             "acfe_permissions": "",
             "return_format": "array"
+        },
+        {
+            "key": "field_5fe99aba583cb",
+            "label": "Button",
+            "name": "hero_button_1",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
         }
     ],
     "location": [
@@ -84,7 +99,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "stopka"
+                "value": "acf-options"
             }
         ]
     ],
@@ -94,15 +109,14 @@
     "label_placement": "left",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
     "acfe_display_title": "",
     "acfe_autosync": [
         "json"
     ],
-    "acfe_permissions": "",
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1587379362
+    "modified": 1609145279
 }
