@@ -47,4 +47,51 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: public/
           server-dir: www/
+          exclude: .git*
+            - .git*/**
+            -  **/.git*/**
+            - node_modules/**
+            - node_modules/**/*
+            - .env
+            - vendor
+            - vendor/**
+            - composer*
+            - .htacccess*
+            - node_modules
+            - theme/node_modules
+            - wp-admin/**
+            - wp-content/cache/**
+            - wp-content/languages/**
+            - wp-content/plugins/**
+            - wp-content/themes/twentytwenty/**
+            - wp-content/themes/index.php
+            - wp-content/upgrade/**
+            - wp-content/uploads/**
+            - wp-content/w3tc-config/**
+            - wp-content/advanced-cache.php
+            - wp-content/index.php
+            - wp-content/object-cache.php
+            - wp-includes/**
+            - index.php
+            - license.txt
+            - readme.html
+            - wp-activate.php
+            - wp-blog-header.php
+            - wp-comments-post.php
+            - wp-config-sample.php
+            - wp-config.default.php
+            - wp-config.env.php
+            - wp-config.load.php
+            - wp-config.php
+            - wp-config.production.php
+            - wp-cron.php
+            - wp-links-opml.php
+            - wp-load.php
+            - wp-login.php
+            - wp-mail.php
+            - wp-settings.php
+            - wp-signup.php
+            - wp-trackback.php
+            - xmlrpc.php
+
           dry-run: true
