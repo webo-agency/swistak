@@ -82,4 +82,3 @@ jobs:
             - wp-config*
             - /wp-*
             - /xmlrpc.php
-          dry-run: true
