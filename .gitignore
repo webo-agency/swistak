@@ -21,6 +21,7 @@ vendor
 
 ## Public
 public/*
+!public/.ftp-deploy-sync-state.json
 
 ## Enviroment
 .env
