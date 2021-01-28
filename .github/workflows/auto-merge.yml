@@ -1,4 +1,4 @@
-name: auto-merge
+name: Security - Auto-merge security fixes
 
 on:
   pull_request:
