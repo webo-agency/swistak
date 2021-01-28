@@ -19,7 +19,7 @@
     "@babel/runtime": "^7.4.5",
     "autoprefixer": "^9.8.5",
     "babel-loader": "^8.0.6",
-    "browser-sync": "^2.26.5",
+    "browser-sync": "^2.26.14",
     "concurrently": "^5.1.0",
     "css-loader": "^3.6.0",
     "dart-sass": "^1.25.0",
@@ -35,7 +35,7 @@
     "vanilla-lazyload": "^17.1.0",
     "webpack": "^4.32.2",
     "webpack-cli": "^3.3.2",
-    "webpack-dev-server": "^3.4.1"
+    "webpack-dev-server": "^3.11.2"
   },
   "browserslist": [
     "> 1%",
