@@ -83,4 +83,3 @@ jobs:
             - readme.html
             - wp-*
             - xmlrpc.php
-          dry-run: true
