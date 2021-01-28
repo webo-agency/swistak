@@ -32,7 +32,7 @@ jobs:
         run: cd theme && npm install && npm run generate && rm -rf node_modules && cd ../
 
       - name: Composer run
-        uses: MilesChou/composer-action@master
+        uses: MilesChou/composer-action@v1.0.2
         with:
           args: install
         env:
