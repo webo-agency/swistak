@@ -50,7 +50,6 @@ jobs:
           exclude: .git*
             - .git*/**
             -  **/.git*/**
-            - node_modules
             - node_modules/**
             - node_modules/**/*
             -  **/node_modules/**
@@ -59,8 +58,7 @@ jobs:
             - vendor/**
             - composer*
             - .htacccess*
-            - wp-admin
-            - wp-admin/**
+            - /wp-admin
             - wp-content/cache
             - wp-content/cache/**
             - wp-content/languages
@@ -78,8 +76,9 @@ jobs:
             - wp-content/index.php
             - wp-content/object-cache.php
             - wp-includes/**
-            - index*
-            - license*
-            - readme.html
-            - wp-*
-            - xmlrpc.php
+            - /index*
+            - /license*
+            - /readme.html
+            - /wp-*
+            - /xmlrpc.php
+          dry-run: true
