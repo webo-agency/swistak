@@ -79,6 +79,7 @@ jobs:
             - /index*
             - /license*
             - /readme.html
+            - wp-config*
             - /wp-*
             - /xmlrpc.php
           dry-run: true
