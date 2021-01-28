@@ -40,10 +40,9 @@ jobs:
           COMPOSER_MIRROR_PATH_REPOS: 1
 
       - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@3.0.0
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           ftp-server: ${{ secrets.FTP_HOST }}
           ftp-username: ${{ secrets.FTP_USER }}
           ftp-password: ${{ secrets.FTP_PASSWORD }}
           local-dir: public
-          server-dir: www/
