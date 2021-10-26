@@ -37,7 +37,7 @@
         align-items: flex-start;
         flex-direction: column;
     
-        @include media-screen(tablet) {
+        @include media-screen(tablet-wide) {
             flex-direction: row;
             align-items: center;
         }
@@ -47,7 +47,7 @@
             &:not(:last-child) {
                 margin-bottom: 17px;
     
-                @include media-screen(tablet) {
+                @include media-screen(tablet-wide) {
                     margin-right: 37px;
                     margin-bottom: 0;
                 }
