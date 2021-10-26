@@ -57,7 +57,7 @@
             background-color: $color-gray-light-3;
             z-index: 9999;
     
-            @include media-screen(tablet) {
+            @include media-screen(tablet-wide) {
                 background-color: transparent;
                 position: relative;
                 width: auto;
@@ -67,11 +67,7 @@
                 filter: none;
                 height: auto;
                 align-items: flex-end;
-            }
-
-            @include media-screen(tablet-wide) {
                 flex-direction: row;
-                align-items: center;
             }
 
             .ks-contact-info {
