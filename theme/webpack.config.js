@@ -2,6 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const jsConfig = {
+    mode:  'development',
     entry: {
         Main: ['./assets/js/script.js'],
         FadeInBottom: ['./assets/js/FadeAnimation/FadeInBottom.js'],
@@ -33,8 +34,24 @@ const jsConfig = {
         ]
     },
     devServer: {
-        contentBase: path.resolve(__dirname, 'assets'),
-        publicPath: '/public/dist/js/'
+        devMiddleware: {
+            writeToDisk: true
+        },
+        static: [
+            {
+              directory: path.join(__dirname, 'assets/public/dist/js'),
+            },
+            {
+              directory: path.join(__dirname, 'assets/public/dist/css'),
+            },
+          ],
+        watchFiles: {
+            paths: path.resolve(__dirname, 'assets/css'),
+            paths: path.resolve(__dirname, 'assets/js'),
+            paths: path.resolve(__dirname, 'assets/sass')
+        },
+        // contentBase: path.resolve(__dirname, 'assets'),
+        // publicPath: '/public/dist/js/'
     }
 }
 
